@@ -1,0 +1,10 @@
+LM::startUp(): Successfully started.
+This is a test.
+This is test 2.
+This is test 2.5.
+Clock testing------------
+Time 1 delta: 0
+Time 2 delta: 501000
+Time 3 split: 1001000
+Time 4 delta: 2002000
+LM::shutDown(): Successfully stopped.
