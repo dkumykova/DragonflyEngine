@@ -9,12 +9,12 @@ using namespace df;
 int main(int argc, char* argv[])
 {
 	// Start up LogManager.
-	/*if (LM.startUp()) {
+	if (LM.startUp()) {
 		printf("Error starting log manager!\n");
 		return 1;
-	}*/
+	}
 	
-
+	//can;t call GM for some reason??
 	Clock *c = new Clock();
 	// Successfully started, so write some stuff.
 	LM.writeLog("This is a test.");

@@ -1,4 +1,6 @@
 #include <string>
+#ifndef __MANAGER_H__
+#define __MANAGER_H__
 namespace df {
 	class Manager {
 	private:
@@ -21,3 +23,4 @@ namespace df {
 		bool isStarted() const;
 	};
 }
+#endif
