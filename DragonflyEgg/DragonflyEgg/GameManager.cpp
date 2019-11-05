@@ -12,7 +12,11 @@ GameManager::GameManager() {
 	
 }
 
+GameManager &GameManager::getInstance() {
 
+	static GameManager gameManager;
+	return gameManager;
+}
 void GameManager::setGameOver(bool new_game_over) {
 	game_over = new_game_over;
 }
@@ -48,6 +52,7 @@ void GameManager::run() {
 
 int GameManager::startUp() {
 	//get instances of and startup all other managers
+	
 	LM.getInstance();
 	LM.startUp();
 

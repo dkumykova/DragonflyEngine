@@ -21,7 +21,7 @@ namespace df {
 	public:
 		//~GameManager();
 		//get singleton
-		static GameManager& getInstance();
+		static GameManager &getInstance();
 		//startup all gm services
 		int startUp();
 		//shutdown all gm stuff

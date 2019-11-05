@@ -17,11 +17,9 @@ int main(int argc, char* argv[])
 	//TODO: get gameManager working + write test code
 	//TODO: vector functions test code
 	//TODO: test code for object + list of objects
-	int start = GM.startUp();
-	if (start) {
-		//do something
-	}
-	//GM.startUp();
+	
+	
+	int a = GM.startUp();
 	//can;t call GM for some reason??
 	Clock *c = new Clock();
 	// Successfully started, so write some stuff.
