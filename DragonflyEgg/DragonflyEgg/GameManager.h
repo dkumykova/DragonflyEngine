@@ -1,7 +1,7 @@
-#include "Manager.h"
-
 #ifndef __GAME_MANAGER_H__
 #define __GAME_MANAGER_H__
+
+#include "Manager.h"
 
 #define GM df::GameManager::getInstance();
 

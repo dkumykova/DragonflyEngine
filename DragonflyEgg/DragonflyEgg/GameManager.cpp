@@ -32,7 +32,7 @@ void GameManager::run() {
 
 		//get input
 		//update game world state
-		//draw cucrrent scene to back buffer
+		//draw current scene to back buffer
 		//swap back buffer to current buffer
 
 		long int loop_time = clock.split();

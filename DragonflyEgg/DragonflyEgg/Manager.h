@@ -1,6 +1,8 @@
-#include <string>
 #ifndef __MANAGER_H__
 #define __MANAGER_H__
+
+#include <string>
+
 namespace df {
 	class Manager {
 	private:
