@@ -40,6 +40,7 @@ namespace df {
 
 		long int getTotalTime() const;
 
+		int getLoopCount() const;
 	};
 }
 #endif

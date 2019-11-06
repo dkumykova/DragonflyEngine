@@ -39,7 +39,7 @@ void GameManager::run() {
 
 	Clock *clock = new Clock();
 	while (!game_over) {
-		if (loop_count > 0) { //stop after 3 loop
+		if (loop_count > 1) { //stop after 2 loop
 			//GM.setGameOver();
 			GM.shutDown();
 		}
@@ -129,4 +129,8 @@ void GameManager::shutDown() {
 
 long int GameManager::getTotalTime() const{
 	return totalTime;
+}
+
+int GameManager::getLoopCount() const{
+	return loop_count;
 }
