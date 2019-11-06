@@ -1,10 +1,52 @@
 LM::startUp(): Successfully started.
-This is a test.
-This is test 2.
-This is test 2.5.
-Clock testing------------
-Time 1 delta: 0
-Time 2 delta: 501000
-Time 3 split: 1001000
-Time 4 delta: 2002000
+Inserting object 0
+Object base constructor called
+ExampleObject constructor called
+Inserting object 1
+Object base constructor called
+ExampleObject constructor called
+Inserting object 2
+Object base constructor called
+ExampleObject constructor called
+All objects currently in world:
+Object type example, id 0, position 0.000000, 0.000000, vector magnitude 0.000000
+Object type example, id 1, position 0.000000, 0.000000, vector magnitude 0.000000
+Object type example, id 2, position 0.000000, 0.000000, vector magnitude 0.000000
+All objects of type example
+Object type example, id 0, position 0.000000, 0.000000, vector magnitude 0.000000
+Object type example, id 1, position 0.000000, 0.000000, vector magnitude 0.000000
+Object type example, id 2, position 0.000000, 0.000000, vector magnitude 0.000000
+All objects of type notdone
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 0
+Object 0 update called
+Object 1 update called
+Object 2 update called
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Object 2 update called
+loop time and count: 1, 0
+time slept in milliseconds: 32
+Total time in run loop: 33
+
+GameManager shutdown called.
+
+All objects before removal of one
+Object type example, id 0, position 2.000000, 3.000000, vector magnitude 3.605551
+Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
+Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
+All objects after removal of one
+Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
+Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
+All objects before removal of one
+Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
+Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
+All objects after removal of one
+Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
+All objects before removal of one
+Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
+All objects after removal of one
+Manager shutdown called.
+
 LM::shutDown(): Successfully stopped.

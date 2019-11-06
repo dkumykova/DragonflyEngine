@@ -3,13 +3,14 @@
 
 #include <string>
 #include "Vector.h"
+#include "Event.h"
 
 namespace df {
 	class Object {
 		
 	private:
-		//static int id_count = 0;
-		int id; //unique game engine defined identifier
+		
+		int id; //unique game engine defined identifier, defined and set in gameManager
 		std::string m_type; //setType()
 		Vector position; //position in game world
 
@@ -31,6 +32,10 @@ namespace df {
 		void setPosition(Vector new_pos);
 
 		Vector getPosition() const;
+
+		void Update();
+
+		virtual int eventHandler(const Event *p_e);
 
 	};
 }

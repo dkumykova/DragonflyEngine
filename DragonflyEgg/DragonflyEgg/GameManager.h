@@ -3,11 +3,12 @@
 
 #include "Manager.h"
 
-#define GM df::GameManager::getInstance();
+#define GM df::GameManager::getInstance()
 
 namespace df {
 	const int FRAME_TIME_DEFAULT = 33;
 	//default game loop time in ms
+	
 
 	class GameManager : public Manager {
 	private:
@@ -17,6 +18,8 @@ namespace df {
 		void operator = (GameManager const&); //don't allow assignment
 		bool game_over; //true -> game stop
 		int frame_time; // target time per game loop, ms
+		int loop_count;
+		long int totalTime; //total time run loop ran
 
 	public:
 		//~GameManager();
@@ -34,6 +37,8 @@ namespace df {
 		bool getGameOver() const;
 
 		int getFrameTime() const;
+
+		long int getTotalTime() const;
 
 	};
 }

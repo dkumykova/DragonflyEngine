@@ -1,4 +1,5 @@
 #include "Manager.h"
+#include "LogManager.h"
 using namespace df;
 
 Manager::Manager() {
@@ -17,10 +18,12 @@ int Manager::startUp() {
 
 void Manager::shutDown() {
 	m_is_started = false;
+	LM.writeLog("Manager shutdown called.\n");
 }
 
 bool Manager::isStarted() const {
 	if (m_is_started) {
+		LM.writeLog("Manager is started called.\n");
 		return true;
 	}
 	else {
