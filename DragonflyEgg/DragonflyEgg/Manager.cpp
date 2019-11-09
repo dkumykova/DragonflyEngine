@@ -1,5 +1,7 @@
 #include "Manager.h"
 #include "LogManager.h"
+#include "WorldManager.h"
+#include "Object.h"
 using namespace df;
 
 Manager::Manager() {
@@ -37,4 +39,20 @@ void Manager::setType(std::string type) {
 
 std::string Manager::getType() const {
 	return m_type;
+}
+
+//send event to all objects
+//return count of number of events sent
+int Manager::onEvent(const Event* p_event) {
+	int count = 0;
+
+	std::vector<Object*> allObjects = WM.getAllObjects();
+	std::vector<Object*>::iterator i;
+	for (i = allObjects.begin(); i != allObjects.end(); i++) {
+		//(*i)->Update();
+		(*i)->eventHandler(p_event); //send step event for each object to handle if they want
+		count++;
+	}
+
+	return count;
 }

@@ -55,12 +55,13 @@ void GameManager::run() {
 
 		Event *step = new EventStep(loop_count);
 		//iterate over all objects in object list and update
+		onEvent(step);
 		std::vector<Object*>::iterator i;
-		std::vector<Object*> updatesCopy = WM.getAllObjects();
-		for (i = updatesCopy.begin(); i != updatesCopy.end(); i++) {
-			(*i)->Update();
-			(*i)->eventHandler(step); //send step event for each object to handle if they want
-		}
+		//std::vector<Object*> updatesCopy = WM.getAllObjects();
+		//for (i = updatesCopy.begin(); i != updatesCopy.end(); i++) {
+		//	(*i)->Update();
+		//	(*i)->eventHandler(step); //send step event for each object to handle if they want
+		//}
 
 		std::vector<Object*> updatesCopy2 = WM.getAllObjects();
 		for (i = updatesCopy2.begin(); i != updatesCopy2.end(); i++) {
@@ -80,7 +81,7 @@ void GameManager::run() {
 		//call worldmanager update 1 time per loop
 		
 		WM.update();
-		
+		//cast this to float for more accuracy probably
 		long int loop_time = clock->split() / 1000; //loop time should be around 20 ms
 		LM.writeLog("loop time and count: %ld, %d", loop_time, loop_count);
 		

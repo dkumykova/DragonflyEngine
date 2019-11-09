@@ -26,8 +26,8 @@ All objects currently in deletions:
 Object 0 update called
 Object 1 update called
 Object 2 update called
-loop time and count: 3, 0
-time slept in milliseconds: 30
+loop time and count: 1, 0
+time slept in milliseconds: 32
 All objects currently in world:
 Object type example, id 0, position 2.000000, 3.000000, vector magnitude 3.605551
 Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
@@ -46,8 +46,8 @@ All objects currently in deletions:
 Object 0 update called
 Object 1 update called
 Object 2 update called
-loop time and count: 2, 1
-time slept in milliseconds: 31
+loop time and count: 1, 1
+time slept in milliseconds: 32
 Total time in run loop: 66
 
 GameManager shutdown called.

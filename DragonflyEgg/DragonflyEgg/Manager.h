@@ -2,6 +2,7 @@
 #define __MANAGER_H__
 
 #include <string>
+#include "Event.h"
 
 namespace df {
 	class Manager {
@@ -23,6 +24,8 @@ namespace df {
 		virtual void shutDown();
 
 		bool isStarted() const;
+
+		int onEvent(const Event *p_event);
 	};
 }
 #endif
