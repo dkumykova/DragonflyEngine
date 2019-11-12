@@ -5,6 +5,7 @@
 #include "Object.h"
 #include "EventStep.h"
 #include "WorldManager.h"
+#include "DisplayManager.h"
 #include <vector>
 
 using namespace df;
@@ -52,6 +53,9 @@ void GameManager::run() {
 		WM.printAllObjects(WM.objectsOfType("example"));
 		LM.writeLog("All objects of type notdone");
 		WM.printAllObjects(WM.objectsOfType("notdone"));
+
+		//create window and draw to it!
+		
 
 		Event *step = new EventStep(loop_count);
 		//iterate over all objects in object list and update
