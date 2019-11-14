@@ -53,6 +53,8 @@ void InputManager::getInput() {
 			//do keypressed stuff, like key code
 			EventKeyboard *eventKey = new EventKeyboard();
 			//eventKey->setKey(event->key);
+			setKeyCode(eventKey, event);
+			LM.writeLog("Key %s pressed", eventKey->getKey());
 			eventKey->setKeyboardAction(KEY_PRESSED);
 			onEvent(eventKey);
 			//keycode = event->key.code;
@@ -64,11 +66,12 @@ void InputManager::getInput() {
 			//key released stuff
 			keycode = event->key.code;
 			EventKeyboard* eventKey = new EventKeyboard();
-			
+			setKeyCode(eventKey, event);
+			LM.writeLog("Key %s released", eventKey->getKey());
 			////eventKey->setKey(sf::Keyboard::Key);
 			eventKey->setKeyboardAction(KEY_RELEASED);
 			onEvent(eventKey);
-			LM.writeLog("Key %d pressed", keycode);
+			LM.writeLog("Key %d released", keycode);
 
 		}
 
@@ -108,6 +111,210 @@ void InputManager::getInput() {
 	}
 	if (sf::Mouse::isButtonPressed(button)) {
 		//mouse pressed stuff
+
 		LM.writeLog("Mouse button %d is being held down", button);
 	}
 }
+
+void setKeyCode(EventKeyboard *ke, sf::Event *event) {
+	switch (event->key.code) {
+		case sf::Keyboard::A:
+			ke->setKey(Keyboard::A);
+			break;
+		case sf::Keyboard::B:
+			ke->setKey(Keyboard::B);
+			break;
+		case sf::Keyboard::C:
+			ke->setKey(Keyboard::C);
+			break;
+		case sf::Keyboard::D:
+			ke->setKey(Keyboard::D);
+			break;
+		case sf::Keyboard::E:
+			ke->setKey(Keyboard::E);
+			break;
+		case sf::Keyboard::F:
+			ke->setKey(Keyboard::F);
+			break;
+		case sf::Keyboard::G:
+			ke->setKey(Keyboard::G);
+			break;
+		case sf::Keyboard::H:
+			ke->setKey(Keyboard::H);
+			break;
+		case sf::Keyboard::I:
+			ke->setKey(Keyboard::I);
+			break;
+		case sf::Keyboard::J:
+			ke->setKey(Keyboard::J);
+			break;
+		case sf::Keyboard::K:
+			ke->setKey(Keyboard::K);
+			break;
+		case sf::Keyboard::L:
+			ke->setKey(Keyboard::L);
+			break;
+		case sf::Keyboard::M:
+			ke->setKey(Keyboard::M);
+			break;
+		case sf::Keyboard::N:
+			ke->setKey(Keyboard::N);
+			break;
+		case sf::Keyboard::O:
+			ke->setKey(Keyboard::O);
+			break;
+		case sf::Keyboard::P:
+			ke->setKey(Keyboard::P);
+			break;
+		case sf::Keyboard::Q:
+			ke->setKey(Keyboard::Q);
+			break;
+		case sf::Keyboard::R:
+			ke->setKey(Keyboard::R);
+			break;
+		case sf::Keyboard::S:
+			ke->setKey(Keyboard::S);
+			break;
+		case sf::Keyboard::T:
+			ke->setKey(Keyboard::T);
+			break;
+		case sf::Keyboard::U:
+			ke->setKey(Keyboard::U);
+			break;
+		case sf::Keyboard::V:
+			ke->setKey(Keyboard::V);
+			break;
+		case sf::Keyboard::W:
+			ke->setKey(Keyboard::W);
+			break;
+		case sf::Keyboard::X:
+			ke->setKey(Keyboard::X);
+			break;
+		case sf::Keyboard::Y:
+			ke->setKey(Keyboard::Y);
+			break;
+		case sf::Keyboard::Z:
+			ke->setKey(Keyboard::Z);
+			break;
+		case sf::Keyboard::F1:
+			ke->setKey(Keyboard::F1);
+			break;
+		case sf::Keyboard::F2:
+			ke->setKey(Keyboard::F2);
+			break;
+		case sf::Keyboard::F3:
+			ke->setKey(Keyboard::F3);
+			break;
+		case sf::Keyboard::F4:
+			ke->setKey(Keyboard::F4);
+			break;
+		case sf::Keyboard::F5:
+			ke->setKey(Keyboard::F5);
+			break;
+		case sf::Keyboard::F6:
+			ke->setKey(Keyboard::F6);
+			break;
+		case sf::Keyboard::F7:
+			ke->setKey(Keyboard::F7);
+			break;
+		case sf::Keyboard::F8:
+			ke->setKey(Keyboard::F8);
+			break;
+		case sf::Keyboard::F9:
+			ke->setKey(Keyboard::F9);
+			break;
+		case sf::Keyboard::F10:
+			ke->setKey(Keyboard::F10);
+			break;
+		case sf::Keyboard::F11:
+			ke->setKey(Keyboard::F11);
+			break;
+		case sf::Keyboard::F12:
+			ke->setKey(Keyboard::F12);
+			break;
+		case sf::Keyboard::Space:
+			ke->setKey(Keyboard::SPACE);
+			break;
+		case sf::Keyboard::Return:
+			ke->setKey(Keyboard::RETURN);
+			break;
+		case sf::Keyboard::Escape:
+			ke->setKey(Keyboard::ESCAPE);
+			break;
+		case sf::Keyboard::Left:
+			ke->setKey(Keyboard::LEFTARROW);
+			break;
+		case sf::Keyboard::Up:
+			ke->setKey(Keyboard::UPARROW);
+			break;
+		case sf::Keyboard::Right:
+			ke->setKey(Keyboard::RIGHTARROW);
+			break;
+		case sf::Keyboard::Down:
+			ke->setKey(Keyboard::DOWNARROW);
+			break;
+		case sf::Keyboard::Tab:
+			ke->setKey(Keyboard::TAB);
+			break;
+		case sf::Keyboard::LControl:
+			ke->setKey(Keyboard::LEFTCONTROL);
+			break;
+		case sf::Keyboard::Slash:
+			ke->setKey(Keyboard::SLASH);
+			break;
+		case sf::Keyboard::Subtract:
+			ke->setKey(Keyboard::MINUS);
+			break;
+		case sf::Keyboard::Tilde:
+			ke->setKey(Keyboard::TILDE);
+			break;
+		case sf::Keyboard::Period:
+			ke->setKey(Keyboard::PERIOD);
+			break;
+		case sf::Keyboard::Comma:
+			ke->setKey(Keyboard::COMMA);
+			break;
+		case sf::Keyboard::RControl:
+			ke->setKey(Keyboard::RIGHTCONTROL);
+			break;
+		case sf::Keyboard::LShift:
+			ke->setKey(Keyboard::LEFTSHIFT);
+			break;
+		case sf::Keyboard::RShift:
+			ke->setKey(Keyboard::RIGHTSHIFT);
+			break;
+		case sf::Keyboard::Num0:
+			ke->setKey(Keyboard::NUM0);
+			break;
+		case sf::Keyboard::Num1:
+			ke->setKey(Keyboard::NUM1);
+			break;
+		case sf::Keyboard::Num2:
+			ke->setKey(Keyboard::NUM2);
+			break;
+		case sf::Keyboard::Num3:
+			ke->setKey(Keyboard::NUM3);
+			break;
+		case sf::Keyboard::Num4:
+			ke->setKey(Keyboard::NUM4);
+			break;
+		case sf::Keyboard::Num5:
+			ke->setKey(Keyboard::NUM5);
+			break;
+		case sf::Keyboard::Num6:
+			ke->setKey(Keyboard::NUM6);
+			break;
+		case sf::Keyboard::Num7:
+			ke->setKey(Keyboard::NUM7);
+			break;
+		case sf::Keyboard::Num8:
+			ke->setKey(Keyboard::NUM8);
+			break;
+		case sf::Keyboard::Num9:
+			ke->setKey(Keyboard::NUM9);
+			break;
+		
+	}
+}
+
+void setMouse

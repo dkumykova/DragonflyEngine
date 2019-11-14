@@ -4,6 +4,7 @@
 #include <string>
 #include "Vector.h"
 #include "Event.h"
+#include "Box.h"
 
 namespace df {
 	class Object {
@@ -14,6 +15,7 @@ namespace df {
 		std::string m_type; //setType()
 		Vector position; //position in game world
 		int altitude; //0 to MAX, lower drawn first
+		Box box; //for sprite boundary + collisions
 
 	public:
 		//construct object, set default params + add to game world (WM)
@@ -44,6 +46,10 @@ namespace df {
 		int setAltitude(int new_alt);
 
 		int getAltitude() const;
+
+		void setBox(Box new_box);
+
+		Box getBox() const;
 	};
 }
 

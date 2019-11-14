@@ -10,6 +10,7 @@ Object::Object() {
 	WM.insertObject(this);
 	LM.writeLog("Object base constructor called");
 	altitude = MAX_ALTITUDE / 2;
+	box = Box(Vector(), 1, 1); //initialize to unit box of 1 by 1
 	//add to wm
 	//id_count++;
 }
@@ -75,4 +76,12 @@ int Object::setAltitude(int new_alt) {
 
 int Object::getAltitude() const {
 	return altitude;
+}
+
+void Object::setBox(Box new_box) {
+	box = new_box;
+}
+
+Box Object::getBox() const {
+	return box;
 }

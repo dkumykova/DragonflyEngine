@@ -1,3 +1,6 @@
+#ifndef __BEE_H__
+#define __BEE_H__
+
 #include "Object.h"
 
 namespace df {
@@ -9,3 +12,5 @@ namespace df {
 		int draw();
 	};
 }
+
+#endif
