@@ -13,6 +13,7 @@ namespace df {
 		int id; //unique game engine defined identifier, defined and set in gameManager
 		std::string m_type; //setType()
 		Vector position; //position in game world
+		int altitude; //0 to MAX, lower drawn first
 
 	public:
 		//construct object, set default params + add to game world (WM)
@@ -37,6 +38,12 @@ namespace df {
 
 		virtual int eventHandler(const Event *p_e);
 
+		virtual int draw();
+
+		//set altitude ob ject, with checks for range between 0 and MAX
+		int setAltitude(int new_alt);
+
+		int getAltitude() const;
 	};
 }
 

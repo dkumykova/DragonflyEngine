@@ -9,6 +9,7 @@ Object::Object() {
 	position = Vector();
 	WM.insertObject(this);
 	LM.writeLog("Object base constructor called");
+	altitude = MAX_ALTITUDE / 2;
 	//add to wm
 	//id_count++;
 }
@@ -52,5 +53,26 @@ void Object::Update() {
 }
 
 int Object::eventHandler(const Event *p_e) {
+	LM.writeLog("Object base event handler called");
 	return 0;
+}
+
+int Object::draw() {
+	LM.writeLog("Object draw called");
+	return 0;
+}
+
+int Object::setAltitude(int new_alt) {
+	if (new_alt >= 0 && new_alt <= MAX_ALTITUDE) {
+		altitude = new_alt;
+		return 0;
+	} else {
+		return -1;
+	}
+	
+	
+}
+
+int Object::getAltitude() const {
+	return altitude;
 }

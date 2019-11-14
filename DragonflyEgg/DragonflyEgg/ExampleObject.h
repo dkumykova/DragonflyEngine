@@ -6,5 +6,6 @@ namespace df {
 		ExampleObject();
 		int eventHandler(Event* p_e);
 		~ExampleObject();
+		int draw();
 	};
 }

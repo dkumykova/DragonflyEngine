@@ -3,11 +3,13 @@
 #include "LogManager.h"
 #include "WorldManager.h"
 #include "GameManager.h"
+#include "DisplayManager.h"
 using namespace df;
 
 ExampleObject::ExampleObject() {
 	setType("example");
 	LM.writeLog("ExampleObject constructor called");
+	setAltitude(1); //lower, appears behind
 }
 
 int ExampleObject::eventHandler(Event *p_e) {
@@ -25,5 +27,13 @@ int ExampleObject::eventHandler(Event *p_e) {
 
 ExampleObject::~ExampleObject() {
 	LM.writeLog("ExampleObject destructor called");
+}
+
+int ExampleObject::draw() {
+	LM.writeLog("Example object draw called");
+
+	DM.drawCh(df::Vector(20, 15), 'B', WHITE);
+	return 0;
+	//draw object here
 }
 

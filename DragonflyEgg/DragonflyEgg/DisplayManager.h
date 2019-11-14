@@ -17,6 +17,12 @@ const sf::Color WINDOW_BACKGROUND_COLOR_DEFAULT = sf::Color::Black;
 const std::string WINDOW_TITLE_DEFAULT = "Dragonfly";
 const std::string FONT_FILE_DEFAULT = "df-font.ttf";
 
+enum Justification {
+	LEFT_JUSTIFIED,
+	CENTER_JUSTIFIED,
+	RIGHT_JUSTIFIED
+};
+
 namespace df {
 
 	class DisplayManager : public Manager {
@@ -31,6 +37,7 @@ namespace df {
 		int window_vertical_pixels; //y pixels in window
 		int window_horizontal_chars; //x ascii spaces in window
 		int window_vertical_chars; //y ascii spaces in window
+		sf::Color window_background_color; 
 
 	public:
 
@@ -41,7 +48,7 @@ namespace df {
 		//close window
 		void shutDown();
 		//draw characyer at window location x, y with color; 0 if ok
-		void drawCh(Vector world_pos, char ch, Color color) const;
+		int drawCh(Vector world_pos, char ch, Color color) const;
 		//return window's horizontal maximum in characters
 		int getHorizontal() const;
 		//return window's vertical maximum in characters
@@ -55,14 +62,18 @@ namespace df {
 		//return pointer to window
 		sf::RenderWindow* getWindow() const;
 		//computer character height, based on window size and font
-		float charHeight();
+		float charHeight() const;
 		//compute character width, based on window size and font
-		float charWidth();
+		float charWidth() const;
 		//convert ascii spaces x, y to window pixels x, y
-		Vector spacesToPixels(Vector spaces);
+		Vector spacesToPixels(Vector spaces) const;
 		//coonvert window pixels x, y to ascii spaces x, y
-		Vector pixelsToSpaces(Vector pixels);
+		Vector pixelsToSpaces(Vector pixels) const;
 		
+		//draw string at location with default color, 0 if ok
+		int drawString(Vector pos, std::string str, Justification just, Color color) const;
+		
+		bool setBackgroundColor(int new_color);
 	};
 }
 #endif

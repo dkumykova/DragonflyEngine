@@ -30,18 +30,68 @@ int DisplayManager::startUp() {
 
 	font.loadFromFile(FONT_FILE_DEFAULT);
 
+	LM.writeLog("DisplayManager startup called");
 	//everything went well assume
 	//call manager startup to ser is started true
+
+	LM.writeLog("Vertical chars, should be 24: %d", getVertical());
+	LM.writeLog("Horizontal chars, should be 80: %d", getHorizontal());
+	LM.writeLog("Horizontal pixels, should be 1024: %d", getHorizontalPixels());
+	LM.writeLog("Vertical pixels, should be 768: %d", getVerticalPixels());
+	//test spaces to pixels and back here
 	return 0;
 
 }
 //close window
 void DisplayManager::shutDown() {
+	LM.writeLog("DisplayManager shutdown called	");
 	window->close();
 }
 //draw characyer at window location x, y with color; 0 if ok
-void DisplayManager::drawCh(Vector world_pos, char ch, Color color) const {
+int DisplayManager::drawCh(Vector world_pos, char ch, Color color) const {
+	if (window == NULL) {
+		return -1;
+	}
 
+	//convert spaces x,y to pixels x, y
+	Vector pixel_pos = spacesToPixels(world_pos);
+
+	//draw background rectangle since text is see through in sfml
+	static sf::RectangleShape rectangle;
+	rectangle.setSize(sf::Vector2f(charWidth(), charHeight()));
+	rectangle.setFillColor(WINDOW_BACKGROUND_COLOR_DEFAULT);
+	rectangle.setPosition(pixel_pos.getX() - charWidth()/10,
+							pixel_pos.getY() + charHeight()/5);
+	window->draw(rectangle);
+
+	//create character to draw
+	static sf::Text text("", font);
+	text.setString(ch);
+	text.setStyle(sf::Text::Bold); //bolder looks better
+
+	//scale to right size
+	if (charWidth() < charHeight()) {
+		text.setCharacterSize(charWidth() * 2);
+	}
+	else {
+		text.setCharacterSize(charHeight() * 2);
+	}
+
+	//set sfml color based on dragonfly color
+	switch (color) {
+	case YELLOW:
+		text.setFillColor(sf::Color::Yellow);
+		LM.writeLog("Setting character color to yellow");
+		break;
+	case RED:
+		text.setFillColor(sf::Color::Red);
+		LM.writeLog("Setting character color to red");
+		break;
+	}
+	//set position in window in pixels
+	text.setPosition(pixel_pos.getX(), pixel_pos.getY());
+
+	window->draw(text);
 }
 //return window's horizontal maximum in characters
 int DisplayManager::getHorizontal() const {
@@ -61,32 +111,75 @@ int DisplayManager::getVerticalPixels() const {
 }
 //render current window buffer, return 0 if ok
 int DisplayManager::swapBuffers() {
-	//do stuff
+	LM.writeLog("swap buffers called");
+	if (window == NULL) {
+		return -1;
+	}
+
+	//show current window
+	window->display();
+
+	//clear other window to get ready for next draw
+	window->clear();
+
+	return 0;
 }
 //return pointer to window
 sf::RenderWindow* DisplayManager::getWindow() const {
 	return window;
 }
-float DisplayManager::charHeight() {
+float DisplayManager::charHeight() const{
 	return getVerticalPixels() / getVertical();
 
 }
+
 //compute character width, based on window size and font
-float DisplayManager::charWidth() {
+float DisplayManager::charWidth() const{
 	return getHorizontalPixels() / getHorizontal();
 }
 //convert ascii spaces x, y to window pixels x, y
-Vector DisplayManager::spacesToPixels(Vector spaces) {
+Vector DisplayManager::spacesToPixels(Vector spaces) const {
 	Vector copy = spaces;
 	copy.setX(copy.getX() * charWidth());
 	copy.setY(copy.getY() * charHeight());
 	return copy;
 }
 //coonvert window pixels x, y to ascii spaces x, y
-Vector DisplayManager::pixelsToSpaces(Vector pixels) {
+Vector DisplayManager::pixelsToSpaces(Vector pixels) const{
 	Vector copy = pixels;
 	copy.setX(copy.getX() / charWidth());
 	copy.setY(copy.getY() / charHeight());
 
 	return copy;
+}
+
+int DisplayManager::drawString(Vector pos, std::string str, Justification just, Color color) const{
+
+	//get starting position
+	Vector starting_pos = pos;
+
+	switch (just) {
+	case CENTER_JUSTIFIED:
+		starting_pos.setX(pos.getX() - str.size() / 2);
+		break;
+	case RIGHT_JUSTIFIED:
+		starting_pos.setX(pos.getX() - str.size());
+		break;
+	case LEFT_JUSTIFIED:
+	default:
+		break;
+	}
+
+	//draw string character by character
+	for (int i = 0; i < str.size(); i++) {
+		Vector temp_pos(starting_pos.getX() + i, starting_pos.getY());
+		drawCh(temp_pos, str[i], color);
+	}
+
+	return 0;
+}
+
+//implement if have time
+bool DisplayManager::setBackgroundColor(int new_color) {
+	return true;
 }

@@ -121,3 +121,17 @@ void WorldManager::printAllObjects(std::vector<Object*> list) {
 	}
 
 }
+
+void WorldManager::draw() {
+	//iterates through all objects and calls individual draw methods for each
+	std::vector<Object*>::iterator i;
+
+	std::vector<Object*> updatesCopy = WM.getAllObjects();
+	for (i = updatesCopy.begin(); i != updatesCopy.end(); i++) {
+		for (int j = 0; j <= MAX_ALTITUDE; j++) { //draw objects in order of altitude
+			if ((*i)->getAltitude() == j) { //if current object alt = iterator
+				(*i)->draw();
+			}
+		}
+	}
+}

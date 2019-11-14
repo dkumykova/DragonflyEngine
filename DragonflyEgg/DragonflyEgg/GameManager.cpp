@@ -66,16 +66,16 @@ void GameManager::run() {
 		//	(*i)->Update();
 		//	(*i)->eventHandler(step); //send step event for each object to handle if they want
 		//}
+		//******deprecated code
+		//std::vector<Object*> updatesCopy2 = WM.getAllObjects();
+		//for (i = updatesCopy2.begin(); i != updatesCopy2.end(); i++) {
+		//	//world manager move current object
+		//}
 
-		std::vector<Object*> updatesCopy2 = WM.getAllObjects();
-		for (i = updatesCopy2.begin(); i != updatesCopy2.end(); i++) {
-			//world manager move current object
-		}
-
-		std::vector<Object*> updatesCopy3 = WM.getAllObjects();
-		for (i = updatesCopy3.begin(); i != updatesCopy3.end(); i++) {
-			//world manager draw current object
-		}
+		//std::vector<Object*> updatesCopy3 = WM.getAllObjects();
+		//for (i = updatesCopy3.begin(); i != updatesCopy3.end(); i++) {
+		//	//world manager draw current object
+		//}
 		//Sleep(20); //for testing!! without worldmanager
 		//get input
 		//update game world state
@@ -85,9 +85,20 @@ void GameManager::run() {
 		//call worldmanager update 1 time per loop
 		
 		WM.update();
+		WM.draw();
+		//test draw something onto screen
+		DM.drawCh(df::Vector(20, 15), 'H', WHITE);
+		DM.drawString(df::Vector(10, 10), "Testing 1", CENTER_JUSTIFIED, WHITE);
+		DM.drawString(df::Vector(30, 10), "Testing &2?", LEFT_JUSTIFIED, RED);
+		DM.drawString(df::Vector(50, 10), "Testing %3!", RIGHT_JUSTIFIED, WHITE);
+		//DM.drawString(df::Vector(10, 5), "Testing string", CENTER_JUSTIFIED, WHITE);
+		//Sleep(5000);
+		DM.swapBuffers();
+		Sleep(2000);
 		//cast this to float for more accuracy probably
 		long int loop_time = clock->split() / 1000; //loop time should be around 20 ms
 		LM.writeLog("loop time and count: %ld, %d", loop_time, loop_count);
+		
 		
 		//we want to sleep if the loop ends early to preserve 
 		//smooth loop transitions
@@ -105,6 +116,7 @@ void GameManager::run() {
 		//results in frame rate drop
 		loop_count++;
 		totalTime += loop_time + (FRAME_TIME_DEFAULT - loop_time); //this should be a multiple of 33 always
+		LM.writeLog("number of steps: %ld", totalTime * loop_count);
 		
 	}
 }
@@ -116,6 +128,7 @@ int GameManager::startUp() {
 		printf("Error starting log manager!\n");
 	}
 	WM.startUp();
+	DM.startUp();
 	game_over = false; 
 	//call in order to have clock millisecond resolution
 	timeBeginPeriod(1);
@@ -128,6 +141,7 @@ void GameManager::shutDown() {
 	LM.writeLog("GameManager shutdown called.\n");
 	WM.shutDown();
 	LM.shutDown();
+	DM.shutDown();
 	setGameOver();
 	timeEndPeriod(1);
 }

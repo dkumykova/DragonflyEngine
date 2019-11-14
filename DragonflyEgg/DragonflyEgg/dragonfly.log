@@ -1,4 +1,9 @@
 LM::startUp(): Successfully started.
+DisplayManager startup called
+Vertical chars, should be 24: 24
+Horizontal chars, should be 80: 80
+Horizontal pixels, should be 1024: 1024
+Vertical pixels, should be 768: 768
 Inserting object 0
 Object base constructor called
 ExampleObject constructor called
@@ -19,12 +24,17 @@ Object type example, id 2, position 0.000000, 0.000000, vector magnitude 0.00000
 All objects of type notdone
 Event base constructor called
 Event Step constructor called with type set to : df::step and initial step count of 0
+Object base event handler called
+Object base event handler called
+Object base event handler called
 All objects currently in deletions:
 Object 0 update called
 Object 1 update called
 Object 2 update called
-loop time and count: 0, 0
-time slept in milliseconds: 33
+swap buffers called
+loop time and count: 2296, 0
+time slept in milliseconds: -2263
+number of steps: 33
 All objects currently in world:
 Object type example, id 0, position 2.000000, 3.000000, vector magnitude 3.605551
 Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
@@ -36,12 +46,17 @@ Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.60555
 All objects of type notdone
 Event base constructor called
 Event Step constructor called with type set to : df::step and initial step count of 1
+Object base event handler called
+Object base event handler called
+Object base event handler called
 All objects currently in deletions:
 Object 0 update called
 Object 1 update called
 Object 2 update called
-loop time and count: 0, 1
-time slept in milliseconds: 33
+swap buffers called
+loop time and count: 2011, 1
+time slept in milliseconds: -1978
+number of steps: 132
 Total time in run loop: 66
 
 GameManager shutdown called.

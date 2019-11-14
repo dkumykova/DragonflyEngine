@@ -7,6 +7,7 @@
 
 
 #define WM df::WorldManager::getInstance()
+const int MAX_ALTITUDE = 4;
 
 namespace df {
 	static int id_count = 0;
@@ -44,6 +45,8 @@ namespace df {
 		std::vector<Object*> objectsOfType(std::string type) const;
 	
 		void printAllObjects(std::vector<Object*> list);
+
+		void draw();
 	};
 }
 

@@ -2,6 +2,7 @@
 #include "LogManager.h"
 #include "WorldManager.h"
 #include "Object.h"
+#include "ExampleObject.h"
 using namespace df;
 
 Manager::Manager() {
@@ -50,6 +51,7 @@ int Manager::onEvent(const Event* p_event) {
 	std::vector<Object*>::iterator i;
 	for (i = allObjects.begin(); i != allObjects.end(); i++) {
 		//(*i)->Update();
+		//**for some reason this is only calling the virtual event instead of individualized
 		(*i)->eventHandler(p_event); //send step event for each object to handle if they want
 		count++;
 	}
