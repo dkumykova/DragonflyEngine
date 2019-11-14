@@ -1,6 +1,7 @@
 #include "DisplayManager.h"
 #include "LogManager.h"
 
+
 using namespace df;
 
 DisplayManager::DisplayManager() {
@@ -29,10 +30,14 @@ int DisplayManager::startUp() {
 	window->setVerticalSyncEnabled(true);
 
 	font.loadFromFile(FONT_FILE_DEFAULT);
+	window->setKeyRepeatEnabled(false); //disable keyboard repeat so can hold down buttons
+	
+
 
 	LM.writeLog("DisplayManager startup called");
 	//everything went well assume
 	//call manager startup to ser is started true
+	Manager::startUp();
 
 	LM.writeLog("Vertical chars, should be 24: %d", getVertical());
 	LM.writeLog("Horizontal chars, should be 80: %d", getHorizontal());
@@ -45,6 +50,7 @@ int DisplayManager::startUp() {
 //close window
 void DisplayManager::shutDown() {
 	LM.writeLog("DisplayManager shutdown called	");
+	Manager::shutDown();
 	window->close();
 }
 //draw characyer at window location x, y with color; 0 if ok

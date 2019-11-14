@@ -1,5 +1,2 @@
-﻿  ExampleObject.cpp
-  GameManager.cpp
-  Generating Code...
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ExampleObject.cpp(26): warning C4715: 'df::ExampleObject::eventHandler': not all control paths return a value
+﻿  GameManager.cpp
   DragonflyEgg.vcxproj -> C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\x64\Debug\DragonflyEgg.exe

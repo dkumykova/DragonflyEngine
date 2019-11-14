@@ -6,6 +6,7 @@
 #include "EventStep.h"
 #include "WorldManager.h"
 #include "DisplayManager.h"
+#include "InputManager.h"
 #include <vector>
 
 using namespace df;
@@ -51,13 +52,14 @@ void GameManager::run() {
 		WM.printAllObjects(WM.getAllObjects());
 		LM.writeLog("All objects of type example");
 		WM.printAllObjects(WM.objectsOfType("example"));
-		LM.writeLog("All objects of type notdone");
-		WM.printAllObjects(WM.objectsOfType("notdone"));
+		LM.writeLog("All objects of type Bee");
+		WM.printAllObjects(WM.objectsOfType("Bee"));
 
 		//create window and draw to it!
 		
 
-		Event *step = new EventStep(loop_count);
+		EventStep *step = new EventStep(loop_count);
+		
 		//iterate over all objects in object list and update
 		onEvent(step);
 		std::vector<Object*>::iterator i;
@@ -83,13 +85,13 @@ void GameManager::run() {
 		//swap back buffer to current buffer
 
 		//call worldmanager update 1 time per loop
-		
+		IM.getInput();
 		WM.update();
 		WM.draw();
 		//test draw something onto screen
 		DM.drawCh(df::Vector(20, 15), 'H', WHITE);
 		DM.drawString(df::Vector(10, 10), "Testing 1", CENTER_JUSTIFIED, WHITE);
-		DM.drawString(df::Vector(30, 10), "Testing &2?", LEFT_JUSTIFIED, RED);
+		DM.drawString(df::Vector(30, 5), "Testing &2?", LEFT_JUSTIFIED, YELLOW);
 		DM.drawString(df::Vector(50, 10), "Testing %3!", RIGHT_JUSTIFIED, WHITE);
 		//DM.drawString(df::Vector(10, 5), "Testing string", CENTER_JUSTIFIED, WHITE);
 		//Sleep(5000);
@@ -126,9 +128,20 @@ int GameManager::startUp() {
 	LM.writeLog("GameManager startup called.\n");
 	if (LM.startUp()) {
 		printf("Error starting log manager!\n");
+		return -1;
 	}
-	WM.startUp();
-	DM.startUp();
+	if (WM.startUp()) {
+		LM.writeLog("Error starting WM");
+		return -1;
+	}
+	if (DM.startUp()) {
+		LM.writeLog("Error starting DM");
+		return -1;
+	}
+	if (IM.startUp()) {
+		LM.writeLog("Error starting IM");
+		return -1;
+	}
 	game_over = false; 
 	//call in order to have clock millisecond resolution
 	timeBeginPeriod(1);

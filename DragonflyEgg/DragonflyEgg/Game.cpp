@@ -4,6 +4,7 @@
 #include "Windows.h"
 #include "GameManager.h"
 #include "ExampleObject.h"
+#include "Bee.h"
 
 using namespace df;
 
@@ -27,6 +28,7 @@ int main(int argc, char* argv[])
 	new ExampleObject;
 	new ExampleObject;
 	new ExampleObject;
+	new Bee;
 	
 	GM.run();
 

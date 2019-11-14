@@ -16,6 +16,7 @@ namespace df {
 		void setType(std::string new_type);
 
 		std::string getType() const;
+
 	};
 }
 

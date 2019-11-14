@@ -1,6 +1,7 @@
 #include "Event.h"
 #include "LogManager.h"
 
+
 using namespace df;
 
 Event::Event() {
@@ -10,6 +11,7 @@ Event::Event() {
 
 Event::~Event() {
 	LM.writeLog("Event base destructor called");
+	
 }
 
 
