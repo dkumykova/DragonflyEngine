@@ -41,7 +41,7 @@ void GameManager::run() {
 
 	Clock *clock = new Clock();
 	while (!game_over) {
-		if (loop_count > 1) { //stop after 2 loop
+		if (loop_count > 4) { //stop after 2 loop
 			//GM.setGameOver();
 			GM.shutDown();
 		}
@@ -88,11 +88,13 @@ void GameManager::run() {
 		IM.getInput();
 		WM.update();
 		WM.draw();
+		//draw actual objects with different altitudes
 		//test draw something onto screen
-		DM.drawCh(df::Vector(20, 15), 'H', WHITE);
-		DM.drawString(df::Vector(10, 10), "Testing 1", CENTER_JUSTIFIED, WHITE);
-		DM.drawString(df::Vector(30, 5), "Testing &2?", LEFT_JUSTIFIED, YELLOW);
-		DM.drawString(df::Vector(50, 10), "Testing %3!", RIGHT_JUSTIFIED, WHITE);
+		//DM.drawCh(df::Vector(20, 15), 'H', YELLOW);
+		//demonstrate the different justifications for drawing strings
+		DM.drawString(df::Vector(50, 5), "Center Justified", CENTER_JUSTIFIED, WHITE);
+		DM.drawString(df::Vector(50, 10), "Left Justified", LEFT_JUSTIFIED, WHITE);
+		DM.drawString(df::Vector(50, 15), "Right Justified", RIGHT_JUSTIFIED, WHITE);
 		//DM.drawString(df::Vector(10, 5), "Testing string", CENTER_JUSTIFIED, WHITE);
 		//Sleep(5000);
 		DM.swapBuffers();

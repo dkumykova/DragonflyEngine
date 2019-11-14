@@ -53,12 +53,13 @@ void InputManager::getInput() {
 			//do keypressed stuff, like key code
 			EventKeyboard *eventKey = new EventKeyboard();
 			//eventKey->setKey(event->key);
-			setKeyCode(eventKey, event);
-			LM.writeLog("Key %s pressed", eventKey->getKey());
+			std::string key = setKeyCode(eventKey, event);
+			
+			LM.writeLog("Key %s pressed", key.c_str());
 			eventKey->setKeyboardAction(KEY_PRESSED);
 			onEvent(eventKey);
 			//keycode = event->key.code;
-			LM.writeLog("Key %d pressed", keycode);
+			//LM.writeLog("Key %d pressed", keycode);
 
 		}
 
@@ -66,12 +67,12 @@ void InputManager::getInput() {
 			//key released stuff
 			keycode = event->key.code;
 			EventKeyboard* eventKey = new EventKeyboard();
-			setKeyCode(eventKey, event);
-			LM.writeLog("Key %s released", eventKey->getKey());
+			std::string key = setKeyCode(eventKey, event);
+			LM.writeLog("Key %s released", key.c_str());
 			////eventKey->setKey(sf::Keyboard::Key);
 			eventKey->setKeyboardAction(KEY_RELEASED);
 			onEvent(eventKey);
-			LM.writeLog("Key %d released", keycode);
+			//LM.writeLog("Key %d released", keycode);
 
 		}
 
@@ -116,19 +117,24 @@ void InputManager::getInput() {
 	}
 }
 
-void setKeyCode(EventKeyboard *ke, sf::Event *event) {
+std::string InputManager::setKeyCode(EventKeyboard *ke, sf::Event *event) {
+	std::string keycode;
 	switch (event->key.code) {
+		
 		case sf::Keyboard::A:
 			ke->setKey(Keyboard::A);
+			keycode = "A";
 			break;
 		case sf::Keyboard::B:
 			ke->setKey(Keyboard::B);
+			
 			break;
 		case sf::Keyboard::C:
 			ke->setKey(Keyboard::C);
 			break;
 		case sf::Keyboard::D:
 			ke->setKey(Keyboard::D);
+			keycode = "D";
 			break;
 		case sf::Keyboard::E:
 			ke->setKey(Keyboard::E);
@@ -174,6 +180,7 @@ void setKeyCode(EventKeyboard *ke, sf::Event *event) {
 			break;
 		case sf::Keyboard::S:
 			ke->setKey(Keyboard::S);
+			keycode = "S";
 			break;
 		case sf::Keyboard::T:
 			ke->setKey(Keyboard::T);
@@ -186,6 +193,7 @@ void setKeyCode(EventKeyboard *ke, sf::Event *event) {
 			break;
 		case sf::Keyboard::W:
 			ke->setKey(Keyboard::W);
+			keycode = "W";
 			break;
 		case sf::Keyboard::X:
 			ke->setKey(Keyboard::X);
@@ -234,6 +242,7 @@ void setKeyCode(EventKeyboard *ke, sf::Event *event) {
 			break;
 		case sf::Keyboard::Space:
 			ke->setKey(Keyboard::SPACE);
+			keycode = "Space";
 			break;
 		case sf::Keyboard::Return:
 			ke->setKey(Keyboard::RETURN);
@@ -243,15 +252,19 @@ void setKeyCode(EventKeyboard *ke, sf::Event *event) {
 			break;
 		case sf::Keyboard::Left:
 			ke->setKey(Keyboard::LEFTARROW);
+			keycode = "Left";
 			break;
 		case sf::Keyboard::Up:
 			ke->setKey(Keyboard::UPARROW);
+			keycode = "Up";
 			break;
 		case sf::Keyboard::Right:
 			ke->setKey(Keyboard::RIGHTARROW);
+			keycode = "Right";
 			break;
 		case sf::Keyboard::Down:
 			ke->setKey(Keyboard::DOWNARROW);
+			keycode = "Down";
 			break;
 		case sf::Keyboard::Tab:
 			ke->setKey(Keyboard::TAB);
@@ -315,6 +328,7 @@ void setKeyCode(EventKeyboard *ke, sf::Event *event) {
 			break;
 		
 	}
+	return keycode;
 }
 
-void setMouse
+//void setMouse

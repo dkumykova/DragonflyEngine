@@ -2,7 +2,8 @@
 #define __INPUT_MANAGER_H__
 
 #include "Manager.h"
-
+#include "EventKeyboard.h"
+#include "SFML/Graphics.hpp"
 
 #define IM df::InputManager::getInstance()
 
@@ -22,6 +23,8 @@ namespace df {
 
 		//get input from keyboard + mouse and pass event along to all objects
 		void getInput();
+
+		std::string setKeyCode(EventKeyboard* ke, sf::Event* event);
 	};
 }
 

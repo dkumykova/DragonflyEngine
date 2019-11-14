@@ -82,16 +82,22 @@ int DisplayManager::drawCh(Vector world_pos, char ch, Color color) const {
 	else {
 		text.setCharacterSize(charHeight() * 2);
 	}
-
+	//int count = 1;
 	//set sfml color based on dragonfly color
 	switch (color) {
 	case YELLOW:
 		text.setFillColor(sf::Color::Yellow);
-		LM.writeLog("Setting character color to yellow");
+		//LM.writeLog("Setting character color to yellow");
 		break;
 	case RED:
 		text.setFillColor(sf::Color::Red);
-		LM.writeLog("Setting character color to red");
+		//LM.writeLog("Setting character color to red");
+		break;
+	case WHITE:
+		text.setFillColor(sf::Color::White);
+		//LM.writeLog("Setting character color to white");
+		break;
+	default:
 		break;
 	}
 	//set position in window in pixels

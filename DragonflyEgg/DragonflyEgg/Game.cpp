@@ -25,8 +25,8 @@ int main(int argc, char* argv[])
 	}
 
 	//create objects and add to WM
-	new ExampleObject;
-	new ExampleObject;
+	//new ExampleObject;
+	//new ExampleObject;
 	new ExampleObject;
 	new Bee;
 	

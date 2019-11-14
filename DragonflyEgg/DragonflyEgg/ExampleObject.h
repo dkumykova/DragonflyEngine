@@ -7,7 +7,7 @@ namespace df {
 	class ExampleObject : public Object {
 	public:
 		ExampleObject();
-		int eventHandler(Event* p_e);
+		int eventHandler(const Event* p_e);
 		~ExampleObject();
 		int draw();
 	};
