@@ -66,6 +66,9 @@
     <ClInclude Include="Box.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EventCollision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Object Include="LogManager.obj" />
@@ -117,6 +120,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EventCollision.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -7,6 +7,11 @@
 #include "Box.h"
 
 namespace df {
+	enum Solidness {
+		HARD, //object causes collision and impedes
+		SOFT, //object causes collisiosn but doens't impede
+		SPECTRAL //object doesn't cause collisions
+	};
 	class Object {
 		
 	private:
@@ -16,6 +21,10 @@ namespace df {
 		Vector position; //position in game world
 		int altitude; //0 to MAX, lower drawn first
 		Box box; //for sprite boundary + collisions
+		Vector direction; 
+		float speed; //object speed in direction
+		Vector velocity;
+		Solidness solidness; 
 
 	public:
 		//construct object, set default params + add to game world (WM)
@@ -50,6 +59,28 @@ namespace df {
 		void setBox(Box new_box);
 
 		Box getBox() const;
+
+		void setSpeed(float new_speed);
+
+		float getSpeed() const;
+
+		void setDirection(Vector new_direction);
+
+		Vector getDirection() const;
+
+		void setVelocity(Vector new_vel);
+
+		Vector getVelocity() const;
+
+		//predict object position based ons peed and direction, return prediction
+		Vector predictPosition();
+
+		bool isSolid() const; //tru if hard or soft, else false
+
+		//set object solidness with checks for consistency
+		int setSolidness(Solidness new_solid);
+
+		Solidness getSolidness() const;
 	};
 }
 

@@ -47,6 +47,18 @@ namespace df {
 		void printAllObjects(std::vector<Object*> list);
 
 		void draw();
+
+		//return list of objects collided with at position "where"
+		//collisions only with solid objects
+		//does not consider if obj is solid or not
+		std::vector<Object*> getCollisions(Object *obj, Vector where) const;
+
+		//move object
+		//if collision with solid, send collision events
+		//if no collision with solid, move ok else don't move object
+		//if object is spectral, move ok
+		//return 0 if move ok, else -1 if collision with solid
+		int moveObject(Object *obj, Vector where);
 	};
 }
 

@@ -71,7 +71,14 @@ void WorldManager::update() {
 	LM.writeLog("All objects currently in deletions:");
 	printAllObjects(deletions);
 	for (i = updates.begin(); i != updates.end(); i++) {
+		//if object changes position, move
+		Vector new_pos = (*i)->predictPosition();
+		if (new_pos.getX() != (*i)->getPosition().getX() && new_pos.getY() !=
+			(*i)->getPosition().getY()) {
+			//moveObject(); to new pos
+		}
 		(*i)->Update();
+
 	}
 
 	for (i = deletions.begin(); i != deletions.end(); i++) {
@@ -134,4 +141,13 @@ void WorldManager::draw() {
 			}
 		}
 	}
+}
+
+std::vector<Object*> WorldManager::getCollisions(Object* obj, Vector where) const {
+
+}
+
+
+int WorldManager::moveObject(Object* obj, Vector where) {
+
 }

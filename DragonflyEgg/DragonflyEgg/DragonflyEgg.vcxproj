@@ -134,6 +134,7 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="DisplayManager.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="EventCollision.h" />
     <ClInclude Include="EventKeyboard.h" />
     <ClInclude Include="EventMouse.h" />
     <ClInclude Include="EventStep.h" />
@@ -155,6 +156,7 @@
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="DisplayManager.cpp" />
     <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventCollision.cpp" />
     <ClCompile Include="EventKeyboard.cpp" />
     <ClCompile Include="EventMouse.cpp" />
     <ClCompile Include="EventStep.cpp" />

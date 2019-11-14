@@ -11,6 +11,9 @@ Object::Object() {
 	LM.writeLog("Object base constructor called");
 	altitude = MAX_ALTITUDE / 2;
 	box = Box(Vector(), 1, 1); //initialize to unit box of 1 by 1
+	speed = 0;
+	direction = Vector();
+	velocity = Vector();
 	//add to wm
 	//id_count++;
 }
@@ -84,4 +87,55 @@ void Object::setBox(Box new_box) {
 
 Box Object::getBox() const {
 	return box;
+}
+
+void Object::setSpeed(float new_speed) {
+	speed = new_speed;
+}
+
+float Object::getSpeed() const {
+	return speed;
+}
+
+void Object::setDirection(Vector new_direction) {
+	direction = new_direction;
+}
+
+Vector Object::getDirection() const {
+	return direction;
+}
+
+//these are supposed to use normalize and scale but not sure how
+void Object::setVelocity(Vector new_vel) {
+	velocity = new_vel;
+}
+
+Vector Object::getVelocity() const {
+	return velocity;
+}
+
+//predict object position based ons peed and direction, return prediction
+Vector Object::predictPosition() {
+	//add velocity to position
+	Vector new_pos = position + getVelocity();
+
+	//return new position
+	return new_pos;
+}
+
+bool Object::isSolid() const {
+	if (solidness == HARD || solidness == SOFT) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+int Object::setSolidness(Solidness new_solid) {
+	solidness = new_solid;
+}
+
+Solidness Object::getSolidness() const {
+	return solidness;
 }
