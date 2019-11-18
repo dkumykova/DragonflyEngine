@@ -41,7 +41,7 @@ void GameManager::run() {
 
 	Clock *clock = new Clock();
 	while (!game_over) {
-		if (loop_count > 4) { //stop after 2 loop
+		if (loop_count > 2000) { //stop after 2 loop
 			//GM.setGameOver();
 			GM.shutDown();
 		}
@@ -79,7 +79,7 @@ void GameManager::run() {
 		DM.drawString(df::Vector(50, 10), "Left Justified", LEFT_JUSTIFIED, WHITE);
 		DM.drawString(df::Vector(50, 15), "Right Justified", RIGHT_JUSTIFIED, WHITE);
 		DM.swapBuffers();
-		Sleep(2000);
+		//Sleep(2000);
 		//cast this to float for more accuracy probably
 		long int loop_time = clock->split() / 1000; //loop time should be around 20 ms
 		LM.writeLog("loop time and count: %ld, %d", loop_time, loop_count);

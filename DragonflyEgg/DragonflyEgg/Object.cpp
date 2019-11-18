@@ -14,6 +14,7 @@ Object::Object() {
 	speed = 0;
 	direction = Vector();
 	velocity = Vector();
+	setSolidness(HARD);
 	//add to wm
 	//id_count++;
 }
@@ -51,8 +52,8 @@ Vector Object::getPosition() const {
 void Object::Update() {
 	//do update stuff here
 	LM.writeLog("Object %d update called", id);
-	Vector pos = Vector(2, 3); //test vector setting
-	this->setPosition(pos);
+	//Vector pos = Vector(2, 3); //test vector setting
+	//this->setPosition(pos);
 	//this->getPosition().setXY(2, 3);
 }
 
@@ -120,7 +121,7 @@ Vector Object::getVelocity() const {
 //predict object position based ons peed and direction, return prediction
 Vector Object::predictPosition() {
 	//add velocity to position
-	Vector new_pos = getVelocity().operator+(position);
+	Vector new_pos = getVelocity().operator+(getPosition());
 
 	//return new position
 	return new_pos;
