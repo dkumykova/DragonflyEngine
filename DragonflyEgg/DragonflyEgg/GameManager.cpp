@@ -63,22 +63,7 @@ void GameManager::run() {
 		//iterate over all objects in object list and update
 		onEvent(step);
 		std::vector<Object*>::iterator i;
-		//std::vector<Object*> updatesCopy = WM.getAllObjects();
-		//for (i = updatesCopy.begin(); i != updatesCopy.end(); i++) {
-		//	(*i)->Update();
-		//	(*i)->eventHandler(step); //send step event for each object to handle if they want
-		//}
-		//******deprecated code
-		//std::vector<Object*> updatesCopy2 = WM.getAllObjects();
-		//for (i = updatesCopy2.begin(); i != updatesCopy2.end(); i++) {
-		//	//world manager move current object
-		//}
-
-		//std::vector<Object*> updatesCopy3 = WM.getAllObjects();
-		//for (i = updatesCopy3.begin(); i != updatesCopy3.end(); i++) {
-		//	//world manager draw current object
-		//}
-		//Sleep(20); //for testing!! without worldmanager
+		
 		//get input
 		//update game world state
 		//draw current scene to back buffer
@@ -88,15 +73,11 @@ void GameManager::run() {
 		IM.getInput();
 		WM.update();
 		WM.draw();
-		//draw actual objects with different altitudes
-		//test draw something onto screen
-		//DM.drawCh(df::Vector(20, 15), 'H', YELLOW);
+
 		//demonstrate the different justifications for drawing strings
 		DM.drawString(df::Vector(50, 5), "Center Justified", CENTER_JUSTIFIED, WHITE);
 		DM.drawString(df::Vector(50, 10), "Left Justified", LEFT_JUSTIFIED, WHITE);
 		DM.drawString(df::Vector(50, 15), "Right Justified", RIGHT_JUSTIFIED, WHITE);
-		//DM.drawString(df::Vector(10, 5), "Testing string", CENTER_JUSTIFIED, WHITE);
-		//Sleep(5000);
 		DM.swapBuffers();
 		Sleep(2000);
 		//cast this to float for more accuracy probably

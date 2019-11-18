@@ -1,16 +1,2 @@
-﻿  Bee.cpp
-  DisplayManager.cpp
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\DisplayManager.cpp(80,37): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\DisplayManager.cpp(83,38): warning C4244: 'argument': conversion from 'float' to 'unsigned int', possible loss of data
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\DisplayManager.cpp(144,29): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-  ExampleObject.cpp
-  Game.cpp
-  GameManager.cpp
-  Manager.cpp
-  Object.cpp
-  WorldManager.cpp
-  Generating Code...
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\DisplayManager.cpp(150,31): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ExampleObject.cpp(27): warning C4715: 'df::ExampleObject::eventHandler': not all control paths return a value
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\DisplayManager.cpp(107): warning C4715: 'df::DisplayManager::drawCh': not all control paths return a value
+﻿  GameManager.cpp
   DragonflyEgg.vcxproj -> C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\x64\Debug\DragonflyEgg.exe

@@ -137,6 +137,7 @@
     <ClInclude Include="EventCollision.h" />
     <ClInclude Include="EventKeyboard.h" />
     <ClInclude Include="EventMouse.h" />
+    <ClInclude Include="EventOut.h" />
     <ClInclude Include="EventStep.h" />
     <ClInclude Include="ExampleObject.h" />
     <ClInclude Include="GameManager.h" />
@@ -144,6 +145,7 @@
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="utility.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="WorldManager.h" />
   </ItemGroup>
@@ -159,6 +161,7 @@
     <ClCompile Include="EventCollision.cpp" />
     <ClCompile Include="EventKeyboard.cpp" />
     <ClCompile Include="EventMouse.cpp" />
+    <ClCompile Include="EventOut.cpp" />
     <ClCompile Include="EventStep.cpp" />
     <ClCompile Include="ExampleObject.cpp" />
     <ClCompile Include="Game.cpp" />
@@ -166,6 +169,7 @@
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="utility.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="WorldManager.cpp" />
   </ItemGroup>

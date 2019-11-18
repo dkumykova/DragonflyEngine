@@ -28,7 +28,7 @@ void Object::setId(int new_id) {
 	id = new_id;
 }
 
-int Object::getId() const{
+int Object::getId() const {
 	return id;
 }
 
@@ -56,7 +56,7 @@ void Object::Update() {
 	//this->getPosition().setXY(2, 3);
 }
 
-int Object::eventHandler(const Event *p_e) {
+int Object::eventHandler(const Event* p_e) {
 	LM.writeLog("Object base event handler called");
 	return 0;
 }
@@ -70,11 +70,12 @@ int Object::setAltitude(int new_alt) {
 	if (new_alt >= 0 && new_alt <= MAX_ALTITUDE) {
 		altitude = new_alt;
 		return 0;
-	} else {
+	}
+	else {
 		return -1;
 	}
-	
-	
+
+
 }
 
 int Object::getAltitude() const {
@@ -105,19 +106,21 @@ Vector Object::getDirection() const {
 	return direction;
 }
 
-//these are supposed to use normalize and scale but not sure how
 void Object::setVelocity(Vector new_vel) {
 	velocity = new_vel;
 }
 
+//based on speed and direction
 Vector Object::getVelocity() const {
-	return velocity;
+	Vector v = getDirection();
+	v.scale(speed);
+	return v;
 }
 
 //predict object position based ons peed and direction, return prediction
 Vector Object::predictPosition() {
 	//add velocity to position
-	Vector new_pos = position + getVelocity();
+	Vector new_pos = getVelocity().operator+(position);
 
 	//return new position
 	return new_pos;
@@ -134,6 +137,7 @@ bool Object::isSolid() const {
 
 int Object::setSolidness(Solidness new_solid) {
 	solidness = new_solid;
+	return 0;
 }
 
 Solidness Object::getSolidness() const {
