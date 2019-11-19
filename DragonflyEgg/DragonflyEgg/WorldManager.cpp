@@ -178,7 +178,7 @@ int WorldManager::moveObject(Object* obj, Vector where) {
 				Object* temp = (*i);
 
 				//create collision event
-				EventCollision c(obj, temp, where);
+				EventCollision c = EventCollision(obj, temp, where);
 				temp->eventHandler(&c);
 
 				//if both are hard can't move

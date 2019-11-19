@@ -4,9 +4,10 @@
 
 #include "Event.h"
 #include "Object.h"
-const std::string COLLISION_EVENT = "df::collision";
 
 namespace df {
+	const std::string COLLISION_EVENT = "df::collision";
+
 	class EventCollision : public Event {
 	private: 
 		Vector pos; //where collision occurred

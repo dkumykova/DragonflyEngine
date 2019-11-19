@@ -6,12 +6,14 @@ EventCollision::EventCollision() {
 	p_obj1 = NULL;
 	p_obj2 = NULL;
 	pos = Vector();
+	setType(COLLISION_EVENT);
 }
 
 EventCollision::EventCollision(Object* obj1, Object* obj2, Vector p) {
 	p_obj1 = obj1;
 	p_obj2 = obj2;
 	pos = p;
+	setType(COLLISION_EVENT);
 }
 
 //object that caused collision
