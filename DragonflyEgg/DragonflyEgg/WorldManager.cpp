@@ -180,7 +180,7 @@ int WorldManager::moveObject(Object* obj, Vector where) {
 				//create collision event
 				EventCollision c = EventCollision(obj, temp, where);
 				temp->eventHandler(&c);
-
+				obj->eventHandler(&c);
 				//if both are hard can't move
 				if (obj->getSolidness() == HARD && temp->getSolidness() == HARD) {
 					do_move = false;

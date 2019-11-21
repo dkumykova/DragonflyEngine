@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	if (GM.startUp()) {
 		printf("error with game manager");
 	}
-
+	LM.setFlush(true);
 	//create objects and add to WM
 	//new ExampleObject;
 	//new ExampleObject;

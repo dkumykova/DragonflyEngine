@@ -109,6 +109,11 @@ void InputManager::getInput() {
 	if (sf::Keyboard::isKeyPressed(keycode)) {
 		LM.writeLog("Key %d is being held down", keycode);
 		//key pressed stuff
+		EventKeyboard* eventKey = new EventKeyboard();
+		eventKey->setKeyboardAction(KEY_DOWN);
+		std::string key = setKeyCode(eventKey, event);
+		
+		//onEvent();
 	}
 	if (sf::Mouse::isButtonPressed(button)) {
 		//mouse pressed stuff

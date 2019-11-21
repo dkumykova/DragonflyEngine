@@ -1,4 +1,6 @@
 //colors dragonfly recognizes
+#ifndef __COLOR_H__
+#define __COLOR_H__
 enum Color {
 	UNDEFINED_COLOR = -1,
 	BLACK = 0,
@@ -13,3 +15,5 @@ enum Color {
 
 //if color not specified use this
 const Color COLOR_DEFAULT = WHITE;
+
+#endif

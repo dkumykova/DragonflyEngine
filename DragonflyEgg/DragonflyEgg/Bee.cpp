@@ -6,6 +6,7 @@
 #include "DisplayManager.h"
 #include "EventKeyboard.h"
 #include "EventCollision.h"
+#include "EventOut.h"
 
 using namespace df;
 
@@ -16,6 +17,7 @@ Bee::Bee() {
 	setSpeed(.25);
 	setDirection(Vector(1.0, 0));
 	setPosition(Vector(20, 20));
+	//setSolidness(SOFT);
 
 }
 
@@ -28,7 +30,7 @@ int Bee::eventHandler(const Event *p_e) {
 			setAltitude(3);
 		}
 		else if (GM.getLoopCount() == 1500) {
-			//WM.markForDelete(this);
+			WM.markForDelete(this);
 			return 0;
 		}
 	}
@@ -40,10 +42,20 @@ int Bee::eventHandler(const Event *p_e) {
 		//if collid with example object controlled by player
 		if (ec->getObject1()->getType() == "example" || ec->getObject2()->getType() == "example") {
 			LM.writeLog("collided with player! Time to delete myself");
-			WM.markForDelete(this);
+			//WM.markForDelete(this);
 		}
 
 	}
+	if (p_e->getType() == OUT_EVENT) {
+		LM.writeLog("Bee has gone out of bounds!");
+		const df::EventOut* eo =
+			dynamic_cast <const df::EventOut*> (p_e);
+		//if collid with example object controlled by player
+
+	}
+
+	//handle event out
+	//log statement
 
 	
 	return 0;

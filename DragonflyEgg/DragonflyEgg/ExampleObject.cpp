@@ -6,6 +6,7 @@
 #include "DisplayManager.h"
 #include "EventKeyboard.h"
 #include "EventCollision.h"
+#include "EventOut.h"
 using namespace df;
 
 ExampleObject::ExampleObject() {
@@ -77,6 +78,14 @@ int ExampleObject::eventHandler(const Event *p_e) {
 			LM.writeLog("collided with bee!");
 			//WM.markForDelete(this);
 		}
+
+	}
+	if (p_e->getType() == OUT_EVENT) {
+		LM.writeLog("Player has gone out of bounds!");
+		const df::EventOut* eo =
+			dynamic_cast <const df::EventOut*> (p_e);
+		//if collid with example object controlled by player
+		
 
 	}
 }
