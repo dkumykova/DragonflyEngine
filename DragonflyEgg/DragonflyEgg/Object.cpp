@@ -1,6 +1,7 @@
 #include "Object.h"
 #include "LogManager.h"
 #include "WorldManager.h"
+#include "ResourceManager.h"
 using namespace df;
 
 Object::Object() {
@@ -64,7 +65,9 @@ int Object::eventHandler(const Event* p_e) {
 
 int Object::draw() {
 	LM.writeLog("Object draw called");
-	return 0;
+	Vector pos = getPosition();
+	
+	return animation.draw(pos);
 }
 
 int Object::setAltitude(int new_alt) {
@@ -143,4 +146,28 @@ int Object::setSolidness(Solidness new_solid) {
 
 Solidness Object::getSolidness() const {
 	return solidness;
+}
+
+//set sprite for this object to animate
+int Object::setSprite(std::string sprite_label) {
+	Sprite *sprite = RM.getSprite(sprite_label);
+
+	if (sprite == NULL) {
+		LM.writeLog("Sprite is null in object set sprite method");
+		return -1;
+	}
+	
+	animation.setSprite(sprite);
+	//setBox(animation.getBox()); //set bounding box to be size of object as drawn
+	return 0;
+}
+
+//set animation for this object to new one
+//set bounding box to siez of associated sprite
+void Object::setAnimation(Animation new_animation) {
+	animation = new_animation;
+}
+
+Animation Object::getAnimation() const {
+	return animation;
 }

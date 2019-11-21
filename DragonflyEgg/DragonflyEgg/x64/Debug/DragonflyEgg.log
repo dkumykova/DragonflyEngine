@@ -1,13 +1,3 @@
-﻿  Bee.cpp
-  ExampleObject.cpp
-  ResourceManager.cpp
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ResourceManager.cpp(26,16): warning C4156: deletion of an array expression without using the array form of 'delete'; array form substituted
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ResourceManager.cpp(26,16): warning C4154: deletion of an array expression; conversion to pointer supplied
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ResourceManager.cpp(102,10): error C2561: 'df::ResourceManager::readData': function must return a value
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ResourceManager.cpp(93): message : see declaration of 'df::ResourceManager::readData'
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ResourceManager.cpp(115,9): error C2561: 'df::ResourceManager::readData': function must return a value
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ResourceManager.cpp(93): message : see declaration of 'df::ResourceManager::readData'
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ResourceManager.cpp(130,18): error C2660: 'atoi': function does not take 0 arguments
-  Generating Code...
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\stdlib.h(447,62): message : see declaration of 'atoi'
-C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\ExampleObject.cpp(91): warning C4715: 'df::ExampleObject::eventHandler': not all control paths return a value
+﻿  Sprite.cpp
+C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\DragonflyEgg\Sprite.cpp(68): warning C4715: 'df::Sprite::addFrame': not all control paths return a value
+  DragonflyEgg.vcxproj -> C:\Users\dood\Documents\Github\DragonflyEngine\DragonflyEgg\x64\Debug\DragonflyEgg.exe

@@ -8,6 +8,7 @@ Sprite::Sprite() {
 	frame_count = 0;
 	frames = new Frame[frame_count];
 	color = COLOR_DEFAULT;
+	max_frame_count = 0;
 }
 Sprite::~Sprite() {
 	LM.writeLog("sprite destructor called");

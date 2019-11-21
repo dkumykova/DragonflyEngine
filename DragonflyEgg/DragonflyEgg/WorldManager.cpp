@@ -152,11 +152,13 @@ std::vector<Object*> WorldManager::getCollisions(Object* obj, Vector where) cons
 	std::vector<Object*>::iterator i;
 
 	std::vector<Object*> updatesCopy = WM.getAllObjects();
-
+	//Box b = u.getWorldBox(obj);
+	
 	for (i = updatesCopy.begin(); i != updatesCopy.end(); i++) {
 		Object* temp = (*i);
-
+		//Box tempBox = u.getWorldBox(temp);
 		if (temp != obj) { //don't collide with self
+			//use boxIntersectBox here isntead
 			if (u.positionsIntersect(temp->getPosition(), where) && temp->isSolid()) {
 				collisionList.push_back(temp);
 			} //no solid collisions

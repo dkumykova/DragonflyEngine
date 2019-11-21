@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="Bee.h" />
     <ClInclude Include="Box.h" />
     <ClInclude Include="Clock.h" />
@@ -148,14 +149,17 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteResourceManager.h" />
     <ClInclude Include="utility.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="WorldManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="LogManager.obj" />
+    <Object Include="SpriteResourceManager.obj" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Bee.cpp" />
     <ClCompile Include="Box.cpp" />
     <ClCompile Include="Clock.cpp" />

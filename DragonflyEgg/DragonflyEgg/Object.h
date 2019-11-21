@@ -5,6 +5,7 @@
 #include "Vector.h"
 #include "Event.h"
 #include "Box.h"
+#include "Animation.h"
 
 namespace df {
 	enum Solidness {
@@ -25,6 +26,7 @@ namespace df {
 		float speed; //object speed in direction
 		Vector velocity;
 		Solidness solidness; 
+		Animation animation;
 
 	public:
 		//construct object, set default params + add to game world (WM)
@@ -49,6 +51,7 @@ namespace df {
 
 		virtual int eventHandler(const Event *p_e);
 
+		//draw object animation
 		virtual int draw();
 
 		//set altitude ob ject, with checks for range between 0 and MAX
@@ -81,6 +84,17 @@ namespace df {
 		int setSolidness(Solidness new_solid);
 
 		Solidness getSolidness() const;
+
+		//set sprite for this object to animate
+		int setSprite(std::string sprite_label);
+
+		//set animation for this object to new one
+		//set bounding box to siez of associated sprite
+		void setAnimation(Animation new_animation);
+
+		Animation getAnimation() const;
+
+		
 	};
 }
 

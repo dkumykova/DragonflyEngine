@@ -8,6 +8,7 @@
 #include "DisplayManager.h"
 #include "InputManager.h"
 #include <vector>
+#include "Frame.h"
 
 using namespace df;
 
@@ -74,6 +75,10 @@ void GameManager::run() {
 		WM.update();
 		WM.draw();
 
+		Frame f = Frame(1, 6, "OOOOO");
+		f.draw(Vector(5, 5), RED);
+		Frame ff = Frame(1, 4, "XXXX"); //<--doesn't work
+		ff.draw(Vector(20, 30), YELLOW);
 		//demonstrate the different justifications for drawing strings
 		DM.drawString(df::Vector(50, 5), "Center Justified", CENTER_JUSTIFIED, WHITE);
 		DM.drawString(df::Vector(50, 10), "Left Justified", LEFT_JUSTIFIED, WHITE);
