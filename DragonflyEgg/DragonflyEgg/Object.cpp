@@ -158,7 +158,11 @@ int Object::setSprite(std::string sprite_label) {
 	}
 	
 	animation.setSprite(sprite);
-	//setBox(animation.getBox()); //set bounding box to be size of object as drawn
+	//this is hacky and probably won't work
+	getBox().setHorizontal(sprite->getWidth());
+	getBox().setVertical(sprite->getHeight());
+	//either or
+	setBox(Box(Vector(), sprite->getWidth(), sprite->getHeight())); //set bounding box to be size of object as drawn
 	return 0;
 }
 

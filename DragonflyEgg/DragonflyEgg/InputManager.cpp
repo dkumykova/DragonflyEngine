@@ -106,19 +106,57 @@ void InputManager::getInput() {
 	}
 
 	//check current key press events for each key - do i have to do ALL of them??
-	if (sf::Keyboard::isKeyPressed(keycode)) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 		LM.writeLog("Key %d is being held down", keycode);
 		//key pressed stuff
 		EventKeyboard* eventKey = new EventKeyboard();
 		eventKey->setKeyboardAction(KEY_DOWN);
+		eventKey->setKey(Keyboard::W);
 		std::string key = setKeyCode(eventKey, event);
 		
-		//onEvent();
+		onEvent(eventKey);
+		//return;
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::D)) {
+		LM.writeLog("Key %d is being held down", keycode);
+		//key pressed stuff
+		EventKeyboard* eventKey = new EventKeyboard();
+		eventKey->setKeyboardAction(KEY_DOWN);
+		eventKey->setKey(Keyboard::D);
+		std::string key = setKeyCode(eventKey, event);
+
+		onEvent(eventKey);
+		//return;
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S)) {
+		LM.writeLog("Key %d is being held down", keycode);
+		//key pressed stuff
+		EventKeyboard* eventKey = new EventKeyboard();
+		eventKey->setKeyboardAction(KEY_DOWN);
+		eventKey->setKey(Keyboard::S);
+		std::string key = setKeyCode(eventKey, event);
+
+		onEvent(eventKey);
+		//return;
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::A)) {
+		LM.writeLog("Key %d is being held down", keycode);
+		//key pressed stuff
+		EventKeyboard* eventKey = new EventKeyboard();
+		eventKey->setKeyboardAction(KEY_DOWN);
+		eventKey->setKey(Keyboard::A);
+		std::string key = setKeyCode(eventKey, event);
+
+		onEvent(eventKey);
+		//return;
 	}
 	if (sf::Mouse::isButtonPressed(button)) {
 		//mouse pressed stuff
-
+		EventMouse* eventMouse = new EventMouse();
+		eventMouse->setMouseAction(PRESSED);
 		LM.writeLog("Mouse button %d is being held down", button);
+
+		onEvent(eventMouse);
 	}
 }
 

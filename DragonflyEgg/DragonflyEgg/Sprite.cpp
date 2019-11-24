@@ -6,23 +6,26 @@ Sprite::Sprite() {
 	width = 0;
 	height = 0;
 	frame_count = 0;
-	frames = new Frame[frame_count];
-	color = COLOR_DEFAULT;
 	max_frame_count = 0;
+	frames = new Frame[max_frame_count];
+	color = COLOR_DEFAULT;
+	
 }
 Sprite::~Sprite() {
 	LM.writeLog("sprite destructor called");
 	if (frames != NULL) {
-		delete frames; //delete array
+		
+		delete [] frames; //delete array
 	}
 }
 Sprite::Sprite(int max_frames) {
 	width = 0;
 	height = 0;
 	frame_count = 0;
-	frames = new Frame[frame_count];
-	color = COLOR_DEFAULT;
 	max_frame_count = max_frames;
+	frames = new Frame[max_frame_count];
+	color = COLOR_DEFAULT;
+	
 }
 
 void Sprite::setWidth(int new_width) {
@@ -63,8 +66,6 @@ int Sprite::addFrame(Frame new_frame) {
 		frames[frame_count] = new_frame;
 		frame_count++;
 	}
-
-
 }
 
 Frame Sprite::getFrame(int frame_num) const {

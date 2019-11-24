@@ -8,6 +8,8 @@ using namespace df;
 WorldManager::WorldManager() {
 	setType("WorldManager");
 	u = Utility();
+	boundary = Box(Vector(), 0, 0);
+	view = Box(Vector(), 0, 0);
 	//initialize updates and deletions lists?
 }
 
@@ -78,7 +80,6 @@ void WorldManager::update() {
 		Vector new_pos = (*i)->predictPosition();
 		if (new_pos.getX() != (*i)->getPosition().getX() || new_pos.getY() !=
 			(*i)->getPosition().getY()) {
-			//moveObject(); to new pos
 			moveObject((*i), new_pos);
 		}
 		(*i)->Update();
@@ -136,12 +137,15 @@ void WorldManager::printAllObjects(std::vector<Object*> list) {
 void WorldManager::draw() {
 	//iterates through all objects and calls individual draw methods for each
 	std::vector<Object*>::iterator i;
-
+	
 	std::vector<Object*> updatesCopy = WM.getAllObjects();
 	for (i = updatesCopy.begin(); i != updatesCopy.end(); i++) {
 		for (int j = 0; j <= MAX_ALTITUDE; j++) { //draw objects in order of altitude
 			if ((*i)->getAltitude() == j) { //if current object alt = iterator
-				(*i)->draw();
+				Box temp = u.getWorldBox((*i));
+				if (u.boxIntersectsBox(temp, view)) { //only draw if object visible on window, i.e. insersects view
+					(*i)->draw();
+				}
 			}
 		}
 	}
@@ -152,16 +156,18 @@ std::vector<Object*> WorldManager::getCollisions(Object* obj, Vector where) cons
 	std::vector<Object*>::iterator i;
 
 	std::vector<Object*> updatesCopy = WM.getAllObjects();
-	//Box b = u.getWorldBox(obj);
+	Box b = u.getWorldBox(obj);
 	
 	for (i = updatesCopy.begin(); i != updatesCopy.end(); i++) {
 		Object* temp = (*i);
-		//Box tempBox = u.getWorldBox(temp);
+		Box tempBox = u.getWorldBox(temp);
 		if (temp != obj) { //don't collide with self
 			//use boxIntersectBox here isntead
-			if (u.positionsIntersect(temp->getPosition(), where) && temp->isSolid()) {
+			if (u.boxIntersectsBox(b, tempBox) && temp->isSolid()) {
 				collisionList.push_back(temp);
-			} //no solid collisions
+			}//no solid collisions
+			/*if (u.positionsIntersect(temp->getPosition(), where) && temp->isSolid()) {
+			} */
 		}//not self
 	}//end iterate
 	return collisionList;
@@ -193,13 +199,95 @@ int WorldManager::moveObject(Object* obj, Vector where) {
 			}
 		}//no collision
 	}//object not solid so can move anywhere it wants
-	obj->setPosition(where);
-	if (obj->getPosition().getX() < 0 || obj->getPosition().getX() > DM.getHorizontal()
+	Box orig_box = u.getWorldBox(obj); //original bounding box
+	obj->setPosition(where); //move object
+	Box new_box = u.getWorldBox(obj); //new bounding box
+	if (u.boxIntersectsBox(orig_box, boundary) && !u.boxIntersectsBox(new_box, boundary)) {
+		EventOut ev = EventOut();
+		LM.writeLog("Sending event out to object!");
+		obj->eventHandler(&ev);
+	}
+	if (view_following == obj) {
+		setViewPosition(obj->getPosition());
+	}
+	/*if (obj->getPosition().getX() < 0 || obj->getPosition().getX() > DM.getHorizontal()
 		|| obj->getPosition().getY() < 0 || obj->getPosition().getY() > DM.getVertical()) {
 
 		EventOut ev = EventOut();
 
 		obj->eventHandler(&ev);
-	}
+	}*/
 	return 0;
+}
+
+void WorldManager::setBoundary(Box new_boundary) {
+	boundary = new_boundary;
+}
+
+Box WorldManager::getBoundary() const {
+	return boundary;
+}
+
+void WorldManager::setView(Box new_view) {
+	view = new_view;
+}
+
+Box WorldManager::getView() const {
+	return view;
+}
+
+void WorldManager::setViewPosition(Vector view_pos) {
+	//make sure horizontal not out of world boundary
+	int x = view_pos.getX() - view.getHorizontal() / 2;
+	if (x + view.getHorizontal() > boundary.getHorizontal()) {
+		x = boundary.getHorizontal() - view.getHorizontal();
+	}
+	if (x < 0) {
+		x = 0;
+	}
+
+	//make sure vertical not out of world boundary
+	int y = view_pos.getY() - view.getVertical() / 2;
+	if (y + view.getVertical() > boundary.getVertical()) {
+		y = boundary.getVertical() - view.getVertical();
+	}
+	if (y < 0) {
+		y = 0;
+	}
+
+	//set view
+	Vector new_corner = Vector(x, y);
+	view.setCorner(new_corner);
+}
+
+
+int WorldManager::setViewFollowing(Object* new_view_following) {
+	//set to null to turn off following
+	if (new_view_following == NULL) {
+		view_following = NULL;
+	}
+
+	//iterate over all objects, make sure new view following is one of them, set
+	//found to true
+	std::vector<Object*>::iterator i;
+	bool found = false;
+	std::vector<Object*> updatesCopy = WM.getAllObjects();
+
+	for (i = updatesCopy.begin(); i != updatesCopy.end(); i++) {
+		if ((*i) == new_view_following) {
+			found = true;
+		}
+	}
+
+	//if found, adjust attribute accordingly and set view position
+	if (found) {
+		view_following = new_view_following;
+		setViewPosition(view_following->getPosition());
+		return 0;
+	}
+	
+	//was not legit and can't change view
+	return -1;
+
+	
 }

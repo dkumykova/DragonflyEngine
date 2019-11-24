@@ -45,20 +45,39 @@ int main(int argc, char* argv[])
 		LM.writeLog("main(): Correctly did not load bad sprite.");
 
 	// Shut everything down.
-	RM.shutDown();
-	LM.shutDown();
+	//RM.shutDown();
+	//LM.shutDown();
 
 	
-	/*if (GM.startUp()) {
+	if (GM.startUp()) {
 		printf("error with game manager");
-	}*/
+	}
 	LM.setFlush(true);
+
+	//load stuff in for testing
+	RM.loadSprite("sprites/saucer-spr.txt", "saucer");
+	RM.loadSprite("sprites/ship-spr.txt", "ship");
+	RM.loadSprite("sprites/bullet-spr.txt", "bullet");
+	RM.loadSprite("sprites/explosion-spr.txt", "explosion");
+	RM.loadSprite("sprites/gameover-spr.txt", "gameover");
+	RM.loadSprite("sprites/gamestart-spr.txt", "gamestart");
+	RM.loadSprite("sprites/healthpack-spr.txt", "healthpack");
+
+	RM.loadSound("sounds/fire.wav", "fire");
+	RM.loadSound("sounds/explode.wav", "explode");
+	RM.loadSound("sounds/nuke.wav", "nuke");
+	RM.loadSound("sounds/game-over.wav", "gameOver");
+	RM.loadSound("sounds/health-pickup.wav", "healthpickup");
+
+	RM.loadMusic("sounds/start-music.wav", "startMusic");
+	RM.loadMusic("sounds/game-music.wav", "gameMusic");
 	//create objects and add to WM
 	
-	//new ExampleObject;
-	//new Bee;
+	new ExampleObject;
+	new Bee;
+
 	
-	//GM.run();
+	GM.run();
 
 	
 	

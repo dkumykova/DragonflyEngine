@@ -1,5 +1,6 @@
 #include "utility.h"
 #include <math.h>
+#include "WorldManager.h"
 
 using namespace df;
 
@@ -16,7 +17,7 @@ bool Utility::positionsIntersect(Vector p1, Vector p2) const{
 	}
 }
 
-bool Utility::boxIntersectsBox(Box A, Box B) {
+bool Utility::boxIntersectsBox(Box A, Box B) const{
 	//test horizontal overlap
 	float widthB = B.getHorizontal();
 	float heightB = B.getVertical();
@@ -56,7 +57,7 @@ bool Utility::boxIntersectsBox(Box A, Box B) {
 
 }
 
-Box Utility::getWorldBox(const Object *obj) {
+Box Utility::getWorldBox(const Object *obj) const{
 	Box temp = obj->getBox();
 	Vector corner = temp.getCorner();
 	corner.setX(corner.getX() + obj->getPosition().getX());
@@ -65,4 +66,13 @@ Box Utility::getWorldBox(const Object *obj) {
 	temp.setCorner(corner);
 
 	return temp;
+}
+
+Vector Utility::worldToView(Vector world_pos) const {
+	Vector view_origin = WM.getView().getCorner();
+	int view_x = view_origin.getX();
+	int view_y = view_origin.getY();
+	Vector view_pos(world_pos.getX() - view_x, world_pos.getY() - view_y);
+
+	return view_pos;
 }

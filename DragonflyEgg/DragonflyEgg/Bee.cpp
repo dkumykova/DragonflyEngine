@@ -18,6 +18,7 @@ Bee::Bee() {
 	setDirection(Vector(1.0, 0));
 	setPosition(Vector(20, 20));
 	setSolidness(SOFT);
+	setSprite("");
 
 }
 

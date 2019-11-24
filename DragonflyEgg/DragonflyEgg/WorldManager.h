@@ -22,6 +22,11 @@ namespace df {
 		std::vector<Object*> updates; //all objects in world
 		std::vector<Object*> deletions; //all objects in world to delete
 		Utility u;
+		Box boundary; //world boundary
+		Box view; //player view of game world
+
+		Object* view_following; //object view is following
+
 	public:
 		static WorldManager& getInstance();
 
@@ -61,6 +66,23 @@ namespace df {
 		//if object is spectral, move ok
 		//return 0 if move ok, else -1 if collision with solid
 		int moveObject(Object* obj, Vector where);
+
+		void setBoundary(Box new_boundary);
+
+		Box getBoundary() const;
+
+		void setView(Box new_view);
+
+		Box getView() const;
+
+		//set view to center window on position view_pos, view edge will not
+		//go beyond world boundary
+		void setViewPosition(Vector view_pos);
+
+		//set view to center window on object
+		//set to null to stop follinwg
+		//if new_view_following not legit, return -1
+		int setViewFollowing(Object *new_view_following);
 	};
 }
 

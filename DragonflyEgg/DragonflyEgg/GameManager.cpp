@@ -7,6 +7,7 @@
 #include "WorldManager.h"
 #include "DisplayManager.h"
 #include "InputManager.h"
+#include "ResourceManager.h"
 #include <vector>
 #include "Frame.h"
 
@@ -76,15 +77,26 @@ void GameManager::run() {
 		WM.draw();
 
 		Frame f = Frame(1, 6, "OOOOO");
+		
 		f.draw(Vector(5, 5), RED);
-		Frame ff = Frame(1, 4, "XXXX"); //<--doesn't work
-		ff.draw(Vector(20, 30), YELLOW);
+			
+		Animation a = Animation();
+		/*Sprite s = Sprite(5);
+		s.setWidth();
+		s.setHeight();
+		s.setColor();*/
+
+		a.setName("testAnimate");
+		a.setSlowdownCount(2);
+		a.setSprite(RM.getSprite("sprites/good-spr.txt"));
+		a.draw(Vector(20, 20));
+		
 		//demonstrate the different justifications for drawing strings
-		DM.drawString(df::Vector(50, 5), "Center Justified", CENTER_JUSTIFIED, WHITE);
-		DM.drawString(df::Vector(50, 10), "Left Justified", LEFT_JUSTIFIED, WHITE);
-		DM.drawString(df::Vector(50, 15), "Right Justified", RIGHT_JUSTIFIED, WHITE);
+		//DM.drawString(df::Vector(50, 5), "Center Justified", CENTER_JUSTIFIED, WHITE);
+		//DM.drawString(df::Vector(50, 10), "Left Justified", LEFT_JUSTIFIED, WHITE);
+		//DM.drawString(df::Vector(50, 15), "Right Justified", RIGHT_JUSTIFIED, WHITE);
 		DM.swapBuffers();
-		//Sleep(2000);
+		
 		//cast this to float for more accuracy probably
 		long int loop_time = clock->split() / 1000; //loop time should be around 20 ms
 		LM.writeLog("loop time and count: %ld, %d", loop_time, loop_count);
@@ -114,10 +126,10 @@ void GameManager::run() {
 int GameManager::startUp() {
 	//get instances of and startup all other managers
 	LM.writeLog("GameManager startup called.\n");
-	if (LM.startUp()) {
+	/*if (LM.startUp()) {
 		printf("Error starting log manager!\n");
 		return -1;
-	}
+	}*/
 	if (WM.startUp()) {
 		LM.writeLog("Error starting WM");
 		return -1;
@@ -130,7 +142,13 @@ int GameManager::startUp() {
 		LM.writeLog("Error starting IM");
 		return -1;
 	}
+	/*if (RM.startUp()) {
+		LM.writeLog("Error starting RM");
+		return -1;
+	}*/
 	game_over = false; 
+	WM.setBoundary(Box(Vector(), DM.getHorizontal(), DM.getVertical()));
+	WM.setView(Box(Vector(), DM.getHorizontal(), DM.getVertical()));
 	//call in order to have clock millisecond resolution
 	timeBeginPeriod(1);
 

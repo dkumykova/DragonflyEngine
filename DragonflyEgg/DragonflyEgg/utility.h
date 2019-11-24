@@ -12,9 +12,11 @@ namespace df {
 		bool positionsIntersect(Vector p1, Vector p2) const;
 
 		
-		bool boxIntersectsBox(Box A, Box B);
+		bool boxIntersectsBox(Box A, Box B) const;
 
-		Box getWorldBox(const Object *obj);
+		Box getWorldBox(const Object *obj) const;
+
+		Vector worldToView(Vector world_pos) const;
 	};
 }
 

@@ -1,4 +1,29 @@
 LM::startUp(): Successfully started.
+SRM::loadSprite(): Loading sprite 'sprites/good-spr.txt'.
+SRM::loadSprite(): Opened file 'sprites/good-spr.txt'.
+	      Frames: 5
+	       Width: 6
+	      Height: 2
+	    Slowdown: 4
+	       Color: green
+SRM::loadSprite(): Sprite 'good' loaded.
+main(): Successfully loaded good sprite.
+SRM::loadSprite(): Loading sprite 'sprites/bad-spr.txt'.
+SRM::loadSprite(): Opened file 'sprites/bad-spr.txt'.
+SRM::loadSprite(): Warning! No 'color' in header.
+SRM::loadSprite(): Warning! No 'slowdown' in header.
+	      Frames: 2
+	       Width: 4
+	      Height: 2
+	    Slowdown: 0
+	       Color: default
+	Error! Line 10: No more frame data.
+SRM::loadSprite(): Error! No frame data to add.
+sprite destructor called
+SRM::loadSprite(): Sprite 'bad' not loaded.
+main(): Correctly did not load bad sprite.
+GameManager startup called.
+
 DisplayManager startup called
 Vertical chars, should be 24: 24
 Horizontal chars, should be 80: 80
@@ -11,178 +36,2544 @@ Object base constructor called
 ExampleObject constructor called
 Inserting object 1
 Object base constructor called
-ExampleObject constructor called
-Inserting object 2
-Object base constructor called
-ExampleObject constructor called
-Inserting object 3
-Object base constructor called
 Bee constructor called
+Sprite is null in object set sprite method
 All objects currently in world:
-Object type example, id 0, position 0.000000, 0.000000, vector magnitude 0.000000
-Object type example, id 1, position 0.000000, 0.000000, vector magnitude 0.000000
-Object type example, id 2, position 0.000000, 0.000000, vector magnitude 0.000000
-Object type Bee, id 3, position 0.000000, 0.000000, vector magnitude 0.000000
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 20.000000, 20.000000, vector magnitude 28.284271
 All objects of type example
-Object type example, id 0, position 0.000000, 0.000000, vector magnitude 0.000000
-Object type example, id 1, position 0.000000, 0.000000, vector magnitude 0.000000
-Object type example, id 2, position 0.000000, 0.000000, vector magnitude 0.000000
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
 All objects of type Bee
-Object type Bee, id 3, position 0.000000, 0.000000, vector magnitude 0.000000
+Object type Bee, id 1, position 20.000000, 20.000000, vector magnitude 28.284271
 Event base constructor called
 Event Step constructor called with type set to : df::step and initial step count of 0
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
 Event base constructor called
 Mouse event constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
+ExampleObject event handler called
+Bee event handler called
 Mouse has moved!
 All objects currently in deletions:
 Object 0 update called
 Object 1 update called
-Object 2 update called
-Object 3 update called
-Example object draw called
-Example object draw called
 Example object draw called
 Bee draw called
+Sprite is null in animation draw call
 swap buffers called
-loop time and count: 2337, 0
-time slept in milliseconds: -2304
+loop time and count: 390, 0
+time slept in milliseconds: -357
 number of steps: 33
 All objects currently in world:
-Object type example, id 0, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 20.250000, 20.000000, vector magnitude 28.461597
 All objects of type example
-Object type example, id 0, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
 All objects of type Bee
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
+Object type Bee, id 1, position 20.250000, 20.000000, vector magnitude 28.461597
 Event base constructor called
 Event Step constructor called with type set to : df::step and initial step count of 1
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
 Event base constructor called
 Mouse event constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
+ExampleObject event handler called
+Bee event handler called
 Mouse has moved!
-Event base constructor called
-Mouse event constructor called
-left click!
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Event base constructor called
-Mouse event constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Mouse has moved!
-Event base constructor called
-Event keyboard constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Key 0 pressed
-Event base constructor called
-Event keyboard constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Key 3 pressed
-Event base constructor called
-Event keyboard constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Key 3 pressed
-Event base constructor called
-Event keyboard constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Key 3 pressed
-Event base constructor called
-Event keyboard constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Key 3 pressed
-Event base constructor called
-Event keyboard constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Key 5 pressed
-Event base constructor called
-Event keyboard constructor called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Object base event handler called
-Key 5 pressed
 All objects currently in deletions:
 Object 0 update called
 Object 1 update called
-Object 2 update called
-Object 3 update called
-Example object draw called
-Example object draw called
 Example object draw called
 Bee draw called
+Sprite is null in animation draw call
 swap buffers called
-loop time and count: 2034, 1
-time slept in milliseconds: -2001
+loop time and count: 19, 1
+time slept in milliseconds: 14
 number of steps: 132
-Total time in run loop: 66
-
-GameManager shutdown called.
-
-All objects before removal of one
-Object type example, id 0, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
-All objects after removal of one
-Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
-All objects before removal of one
-Object type example, id 1, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
-All objects after removal of one
-Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
-All objects before removal of one
-Object type example, id 2, position 2.000000, 3.000000, vector magnitude 3.605551
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
-All objects after removal of one
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
-All objects before removal of one
-Object type Bee, id 3, position 2.000000, 3.000000, vector magnitude 3.605551
-All objects after removal of one
-Manager shutdown called.
-
-LM::shutDown(): Successfully stopped.
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 20.500000, 20.000000, vector magnitude 28.640007
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 20.500000, 20.000000, vector magnitude 28.640007
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 2
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 2
+time slept in milliseconds: 15
+number of steps: 297
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 20.750000, 20.000000, vector magnitude 28.819481
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 20.750000, 20.000000, vector magnitude 28.819481
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 3
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 3
+time slept in milliseconds: 15
+number of steps: 528
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 21.000000, 20.000000, vector magnitude 29.000000
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 21.000000, 20.000000, vector magnitude 29.000000
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 4
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 17, 4
+time slept in milliseconds: 16
+number of steps: 825
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 21.250000, 20.000000, vector magnitude 29.181543
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 21.250000, 20.000000, vector magnitude 29.181543
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 5
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 5
+time slept in milliseconds: 18
+number of steps: 1188
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 21.500000, 20.000000, vector magnitude 29.364094
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 21.500000, 20.000000, vector magnitude 29.364094
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 6
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 6
+time slept in milliseconds: 18
+number of steps: 1617
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 21.750000, 20.000000, vector magnitude 29.547630
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 21.750000, 20.000000, vector magnitude 29.547630
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 7
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 14, 7
+time slept in milliseconds: 19
+number of steps: 2112
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 22.000000, 20.000000, vector magnitude 29.732138
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 22.000000, 20.000000, vector magnitude 29.732138
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 8
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 14, 8
+time slept in milliseconds: 19
+number of steps: 2673
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 22.250000, 20.000000, vector magnitude 29.917595
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 22.250000, 20.000000, vector magnitude 29.917595
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 9
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 13, 9
+time slept in milliseconds: 20
+number of steps: 3300
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 22.500000, 20.000000, vector magnitude 30.103987
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 22.500000, 20.000000, vector magnitude 30.103987
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 10
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 12, 10
+time slept in milliseconds: 21
+number of steps: 3993
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 22.750000, 20.000000, vector magnitude 30.291294
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 22.750000, 20.000000, vector magnitude 30.291294
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 11
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 12, 11
+time slept in milliseconds: 21
+number of steps: 4752
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 23.000000, 20.000000, vector magnitude 30.479502
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 23.000000, 20.000000, vector magnitude 30.479502
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 12
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 11, 12
+time slept in milliseconds: 22
+number of steps: 5577
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 23.250000, 20.000000, vector magnitude 30.668591
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 23.250000, 20.000000, vector magnitude 30.668591
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 13
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 11, 13
+time slept in milliseconds: 22
+number of steps: 6468
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 23.500000, 20.000000, vector magnitude 30.858549
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 23.500000, 20.000000, vector magnitude 30.858549
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 14
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 10, 14
+time slept in milliseconds: 23
+number of steps: 7425
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 23.750000, 20.000000, vector magnitude 31.049356
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 23.750000, 20.000000, vector magnitude 31.049356
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 15
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 9, 15
+time slept in milliseconds: 24
+number of steps: 8448
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 24.000000, 20.000000, vector magnitude 31.240999
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 24.000000, 20.000000, vector magnitude 31.240999
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 16
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 7, 16
+time slept in milliseconds: 26
+number of steps: 9537
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 24.250000, 20.000000, vector magnitude 31.433462
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 24.250000, 20.000000, vector magnitude 31.433462
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 17
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 6, 17
+time slept in milliseconds: 27
+number of steps: 10692
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 24.500000, 20.000000, vector magnitude 31.626730
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 24.500000, 20.000000, vector magnitude 31.626730
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 18
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 6, 18
+time slept in milliseconds: 27
+number of steps: 11913
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 24.750000, 20.000000, vector magnitude 31.820787
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 24.750000, 20.000000, vector magnitude 31.820787
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 19
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 5, 19
+time slept in milliseconds: 28
+number of steps: 13200
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 25.000000, 20.000000, vector magnitude 32.015621
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 25.000000, 20.000000, vector magnitude 32.015621
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 20
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 4, 20
+time slept in milliseconds: 29
+number of steps: 14553
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 25.250000, 20.000000, vector magnitude 32.211216
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 25.250000, 20.000000, vector magnitude 32.211216
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 21
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 21, 21
+time slept in milliseconds: 12
+number of steps: 15972
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 25.500000, 20.000000, vector magnitude 32.407562
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 25.500000, 20.000000, vector magnitude 32.407562
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 22
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 3, 22
+time slept in milliseconds: 30
+number of steps: 17457
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 25.750000, 20.000000, vector magnitude 32.604641
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 25.750000, 20.000000, vector magnitude 32.604641
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 23
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 19, 23
+time slept in milliseconds: 14
+number of steps: 19008
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 26.000000, 20.000000, vector magnitude 32.802441
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 26.000000, 20.000000, vector magnitude 32.802441
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 24
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 19, 24
+time slept in milliseconds: 14
+number of steps: 20625
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 26.250000, 20.000000, vector magnitude 33.000946
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 26.250000, 20.000000, vector magnitude 33.000946
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 25
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 25
+time slept in milliseconds: 15
+number of steps: 22308
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 26.500000, 20.000000, vector magnitude 33.200150
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 26.500000, 20.000000, vector magnitude 33.200150
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 26
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 26
+time slept in milliseconds: 15
+number of steps: 24057
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 26.750000, 20.000000, vector magnitude 33.400036
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 26.750000, 20.000000, vector magnitude 33.400036
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 27
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 16, 27
+time slept in milliseconds: 17
+number of steps: 25872
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 27.000000, 20.000000, vector magnitude 33.600594
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 27.000000, 20.000000, vector magnitude 33.600594
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 28
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 28
+time slept in milliseconds: 18
+number of steps: 27753
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 27.250000, 20.000000, vector magnitude 33.801811
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 27.250000, 20.000000, vector magnitude 33.801811
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 29
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Mouse event constructor called
+ExampleObject event handler called
+Bee event handler called
+Mouse has moved!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 29
+time slept in milliseconds: 18
+number of steps: 29700
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 27.500000, 20.000000, vector magnitude 34.003677
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 27.500000, 20.000000, vector magnitude 34.003677
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 30
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 30
+time slept in milliseconds: 15
+number of steps: 31713
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 27.750000, 20.000000, vector magnitude 34.206177
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 27.750000, 20.000000, vector magnitude 34.206177
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 31
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 13, 31
+time slept in milliseconds: 20
+number of steps: 33792
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 28.000000, 20.000000, vector magnitude 34.409302
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 28.000000, 20.000000, vector magnitude 34.409302
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 32
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 12, 32
+time slept in milliseconds: 21
+number of steps: 35937
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 28.250000, 20.000000, vector magnitude 34.613041
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 28.250000, 20.000000, vector magnitude 34.613041
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 33
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 11, 33
+time slept in milliseconds: 22
+number of steps: 38148
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 28.500000, 20.000000, vector magnitude 34.817379
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 28.500000, 20.000000, vector magnitude 34.817379
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 34
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 11, 34
+time slept in milliseconds: 22
+number of steps: 40425
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 28.750000, 20.000000, vector magnitude 35.022316
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 28.750000, 20.000000, vector magnitude 35.022316
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 35
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 10, 35
+time slept in milliseconds: 23
+number of steps: 42768
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 29.000000, 20.000000, vector magnitude 35.227829
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 29.000000, 20.000000, vector magnitude 35.227829
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 36
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 10, 36
+time slept in milliseconds: 23
+number of steps: 45177
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 29.250000, 20.000000, vector magnitude 35.433918
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 29.250000, 20.000000, vector magnitude 35.433918
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 37
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 9, 37
+time slept in milliseconds: 24
+number of steps: 47652
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 29.500000, 20.000000, vector magnitude 35.640568
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 29.500000, 20.000000, vector magnitude 35.640568
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 38
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 7, 38
+time slept in milliseconds: 26
+number of steps: 50193
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 29.750000, 20.000000, vector magnitude 35.847767
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 29.750000, 20.000000, vector magnitude 35.847767
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 39
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 7, 39
+time slept in milliseconds: 26
+number of steps: 52800
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 30.000000, 20.000000, vector magnitude 36.055511
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 30.000000, 20.000000, vector magnitude 36.055511
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 40
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 6, 40
+time slept in milliseconds: 27
+number of steps: 55473
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 30.250000, 20.000000, vector magnitude 36.263790
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 30.250000, 20.000000, vector magnitude 36.263790
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 41
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 5, 41
+time slept in milliseconds: 28
+number of steps: 58212
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 30.500000, 20.000000, vector magnitude 36.472591
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 30.500000, 20.000000, vector magnitude 36.472591
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 42
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 22, 42
+time slept in milliseconds: 11
+number of steps: 61017
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 30.750000, 20.000000, vector magnitude 36.681911
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 30.750000, 20.000000, vector magnitude 36.681911
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 43
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 21, 43
+time slept in milliseconds: 12
+number of steps: 63888
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 31.000000, 20.000000, vector magnitude 36.891735
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 31.000000, 20.000000, vector magnitude 36.891735
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 44
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 4, 44
+time slept in milliseconds: 29
+number of steps: 66825
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 31.250000, 20.000000, vector magnitude 37.102055
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 31.250000, 20.000000, vector magnitude 37.102055
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 45
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 3, 45
+time slept in milliseconds: 30
+number of steps: 69828
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 31.500000, 20.000000, vector magnitude 37.312866
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 31.500000, 20.000000, vector magnitude 37.312866
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 46
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 20, 46
+time slept in milliseconds: 13
+number of steps: 72897
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 31.750000, 20.000000, vector magnitude 37.524158
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 31.750000, 20.000000, vector magnitude 37.524158
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 47
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 19, 47
+time slept in milliseconds: 14
+number of steps: 76032
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 32.000000, 20.000000, vector magnitude 37.735924
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 32.000000, 20.000000, vector magnitude 37.735924
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 48
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 19, 48
+time slept in milliseconds: 14
+number of steps: 79233
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 32.250000, 20.000000, vector magnitude 37.948154
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 32.250000, 20.000000, vector magnitude 37.948154
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 49
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 49
+time slept in milliseconds: 15
+number of steps: 82500
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 32.500000, 20.000000, vector magnitude 38.160843
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 32.500000, 20.000000, vector magnitude 38.160843
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 50
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 17, 50
+time slept in milliseconds: 16
+number of steps: 85833
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 32.750000, 20.000000, vector magnitude 38.373981
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 32.750000, 20.000000, vector magnitude 38.373981
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 51
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 16, 51
+time slept in milliseconds: 17
+number of steps: 89232
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 33.000000, 20.000000, vector magnitude 38.587563
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 33.000000, 20.000000, vector magnitude 38.587563
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 52
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 16, 52
+time slept in milliseconds: 17
+number of steps: 92697
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 33.250000, 20.000000, vector magnitude 38.801579
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 33.250000, 20.000000, vector magnitude 38.801579
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 53
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 53
+time slept in milliseconds: 18
+number of steps: 96228
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 33.500000, 20.000000, vector magnitude 39.016022
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 33.500000, 20.000000, vector magnitude 39.016022
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 54
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 54
+time slept in milliseconds: 18
+number of steps: 99825
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 33.750000, 20.000000, vector magnitude 39.230888
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 33.750000, 20.000000, vector magnitude 39.230888
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 55
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 55
+time slept in milliseconds: 18
+number of steps: 103488
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 34.000000, 20.000000, vector magnitude 39.446167
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 34.000000, 20.000000, vector magnitude 39.446167
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 56
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 14, 56
+time slept in milliseconds: 19
+number of steps: 107217
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 34.250000, 20.000000, vector magnitude 39.661854
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 34.250000, 20.000000, vector magnitude 39.661854
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 57
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 13, 57
+time slept in milliseconds: 20
+number of steps: 111012
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 34.500000, 20.000000, vector magnitude 39.877937
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 34.500000, 20.000000, vector magnitude 39.877937
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 58
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 12, 58
+time slept in milliseconds: 21
+number of steps: 114873
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 34.750000, 20.000000, vector magnitude 40.094421
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 34.750000, 20.000000, vector magnitude 40.094421
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 59
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 12, 59
+time slept in milliseconds: 21
+number of steps: 118800
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 35.000000, 20.000000, vector magnitude 40.311287
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 35.000000, 20.000000, vector magnitude 40.311287
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 60
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 11, 60
+time slept in milliseconds: 22
+number of steps: 122793
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 35.250000, 20.000000, vector magnitude 40.528538
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 35.250000, 20.000000, vector magnitude 40.528538
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 61
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 9, 61
+time slept in milliseconds: 24
+number of steps: 126852
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 35.500000, 20.000000, vector magnitude 40.746166
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 35.500000, 20.000000, vector magnitude 40.746166
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 62
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 9, 62
+time slept in milliseconds: 24
+number of steps: 130977
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 35.750000, 20.000000, vector magnitude 40.964161
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 35.750000, 20.000000, vector magnitude 40.964161
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 63
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 8, 63
+time slept in milliseconds: 25
+number of steps: 135168
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 36.000000, 20.000000, vector magnitude 41.182522
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 36.000000, 20.000000, vector magnitude 41.182522
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 64
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 24, 64
+time slept in milliseconds: 9
+number of steps: 139425
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 36.250000, 20.000000, vector magnitude 41.401237
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 36.250000, 20.000000, vector magnitude 41.401237
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 65
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 24, 65
+time slept in milliseconds: 9
+number of steps: 143748
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 36.500000, 20.000000, vector magnitude 41.620308
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 36.500000, 20.000000, vector magnitude 41.620308
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 66
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 22, 66
+time slept in milliseconds: 11
+number of steps: 148137
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 36.750000, 20.000000, vector magnitude 41.839725
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 36.750000, 20.000000, vector magnitude 41.839725
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 67
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 21, 67
+time slept in milliseconds: 12
+number of steps: 152592
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 37.000000, 20.000000, vector magnitude 42.059483
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 37.000000, 20.000000, vector magnitude 42.059483
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 68
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 19, 68
+time slept in milliseconds: 14
+number of steps: 157113
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 37.250000, 20.000000, vector magnitude 42.279575
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 37.250000, 20.000000, vector magnitude 42.279575
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 69
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 69
+time slept in milliseconds: 15
+number of steps: 161700
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 37.500000, 20.000000, vector magnitude 42.500000
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 37.500000, 20.000000, vector magnitude 42.500000
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 70
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 17, 70
+time slept in milliseconds: 16
+number of steps: 166353
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 37.750000, 20.000000, vector magnitude 42.720749
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 37.750000, 20.000000, vector magnitude 42.720749
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 71
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 71
+time slept in milliseconds: 18
+number of steps: 171072
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 38.000000, 20.000000, vector magnitude 42.941822
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 38.000000, 20.000000, vector magnitude 42.941822
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 72
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 14, 72
+time slept in milliseconds: 19
+number of steps: 175857
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 38.250000, 20.000000, vector magnitude 43.163208
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 38.250000, 20.000000, vector magnitude 43.163208
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 73
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 30, 73
+time slept in milliseconds: 3
+number of steps: 180708
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 38.500000, 20.000000, vector magnitude 43.384907
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 38.500000, 20.000000, vector magnitude 43.384907
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 74
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 13, 74
+time slept in milliseconds: 20
+number of steps: 185625
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 38.750000, 20.000000, vector magnitude 43.606911
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 38.750000, 20.000000, vector magnitude 43.606911
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 75
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 12, 75
+time slept in milliseconds: 21
+number of steps: 190608
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 39.000000, 20.000000, vector magnitude 43.829212
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 39.000000, 20.000000, vector magnitude 43.829212
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 76
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 12, 76
+time slept in milliseconds: 21
+number of steps: 195657
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 39.250000, 20.000000, vector magnitude 44.051815
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 39.250000, 20.000000, vector magnitude 44.051815
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 77
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 11, 77
+time slept in milliseconds: 22
+number of steps: 200772
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 39.500000, 20.000000, vector magnitude 44.274712
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 39.500000, 20.000000, vector magnitude 44.274712
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 78
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 27, 78
+time slept in milliseconds: 6
+number of steps: 205953
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 39.750000, 20.000000, vector magnitude 44.497894
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 39.750000, 20.000000, vector magnitude 44.497894
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 79
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 26, 79
+time slept in milliseconds: 7
+number of steps: 211200
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 40.000000, 20.000000, vector magnitude 44.721359
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 80
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 9, 80
+time slept in milliseconds: 24
+number of steps: 216513
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 40.250000, 20.000000, vector magnitude 44.945107
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 40.250000, 20.000000, vector magnitude 44.945107
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 81
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 8, 81
+time slept in milliseconds: 25
+number of steps: 221892
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 40.500000, 20.000000, vector magnitude 45.169128
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 40.500000, 20.000000, vector magnitude 45.169128
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 82
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 7, 82
+time slept in milliseconds: 26
+number of steps: 227337
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 40.750000, 20.000000, vector magnitude 45.393417
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 40.750000, 20.000000, vector magnitude 45.393417
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 83
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 7, 83
+time slept in milliseconds: 26
+number of steps: 232848
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 41.000000, 20.000000, vector magnitude 45.617977
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 41.000000, 20.000000, vector magnitude 45.617977
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 84
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Event base constructor called
+ExampleObject event handler called
+Player has collided with something!
+collided with bee!
+Bee event handler called
+Bee has collided with something!
+collided with player! Time to delete myself
+Event base destructor called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 6, 84
+time slept in milliseconds: 27
+number of steps: 238425
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 41.250000, 20.000000, vector magnitude 45.842804
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 41.250000, 20.000000, vector magnitude 45.842804
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 85
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 5, 85
+time slept in milliseconds: 28
+number of steps: 244068
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 41.500000, 20.000000, vector magnitude 46.067886
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 41.500000, 20.000000, vector magnitude 46.067886
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 86
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 21, 86
+time slept in milliseconds: 12
+number of steps: 249777
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 41.750000, 20.000000, vector magnitude 46.293224
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 41.750000, 20.000000, vector magnitude 46.293224
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 87
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 20, 87
+time slept in milliseconds: 13
+number of steps: 255552
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 42.000000, 20.000000, vector magnitude 46.518814
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 42.000000, 20.000000, vector magnitude 46.518814
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 88
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 20, 88
+time slept in milliseconds: 13
+number of steps: 261393
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 42.250000, 20.000000, vector magnitude 46.744652
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 42.250000, 20.000000, vector magnitude 46.744652
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 89
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 19, 89
+time slept in milliseconds: 14
+number of steps: 267300
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 42.500000, 20.000000, vector magnitude 46.970737
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 42.500000, 20.000000, vector magnitude 46.970737
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 90
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 90
+time slept in milliseconds: 15
+number of steps: 273273
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 42.750000, 20.000000, vector magnitude 47.197060
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 42.750000, 20.000000, vector magnitude 47.197060
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 91
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 18, 91
+time slept in milliseconds: 15
+number of steps: 279312
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 43.000000, 20.000000, vector magnitude 47.423622
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 43.000000, 20.000000, vector magnitude 47.423622
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 92
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 17, 92
+time slept in milliseconds: 16
+number of steps: 285417
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 43.250000, 20.000000, vector magnitude 47.650421
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 43.250000, 20.000000, vector magnitude 47.650421
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 93
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 16, 93
+time slept in milliseconds: 17
+number of steps: 291588
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 43.500000, 20.000000, vector magnitude 47.877449
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 43.500000, 20.000000, vector magnitude 47.877449
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 94
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 15, 94
+time slept in milliseconds: 18
+number of steps: 297825
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 43.750000, 20.000000, vector magnitude 48.104702
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 43.750000, 20.000000, vector magnitude 48.104702
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 95
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 14, 95
+time slept in milliseconds: 19
+number of steps: 304128
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 44.000000, 20.000000, vector magnitude 48.332184
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 44.000000, 20.000000, vector magnitude 48.332184
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 96
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 13, 96
+time slept in milliseconds: 20
+number of steps: 310497
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 44.250000, 20.000000, vector magnitude 48.559887
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 44.250000, 20.000000, vector magnitude 48.559887
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 97
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 12, 97
+time slept in milliseconds: 21
+number of steps: 316932
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 44.500000, 20.000000, vector magnitude 48.787807
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 44.500000, 20.000000, vector magnitude 48.787807
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 98
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 11, 98
+time slept in milliseconds: 22
+number of steps: 323433
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 44.750000, 20.000000, vector magnitude 49.015942
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 44.750000, 20.000000, vector magnitude 49.015942
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 99
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 10, 99
+time slept in milliseconds: 23
+number of steps: 330000
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 45.000000, 20.000000, vector magnitude 49.244289
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 45.000000, 20.000000, vector magnitude 49.244289
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 100
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 9, 100
+time slept in milliseconds: 24
+number of steps: 336633
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 45.250000, 20.000000, vector magnitude 49.472847
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 45.250000, 20.000000, vector magnitude 49.472847
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 101
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 8, 101
+time slept in milliseconds: 25
+number of steps: 343332
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 45.500000, 20.000000, vector magnitude 49.701611
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 45.500000, 20.000000, vector magnitude 49.701611
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 102
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 7, 102
+time slept in milliseconds: 26
+number of steps: 350097
+All objects currently in world:
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+Object type Bee, id 1, position 45.750000, 20.000000, vector magnitude 49.930576
+All objects of type example
+Object type example, id 0, position 40.000000, 20.000000, vector magnitude 44.721359
+All objects of type Bee
+Object type Bee, id 1, position 45.750000, 20.000000, vector magnitude 49.930576
+Event base constructor called
+Event Step constructor called with type set to : df::step and initial step count of 103
+ExampleObject event handler called
+Object 0 received a step event!
+Bee event handler called
+Bee received a step event!
+Event base constructor called
+Event keyboard constructor called
+Key  pressed
+ExampleObject event handler called
+Bee event handler called
+All objects currently in deletions:
+Object 0 update called
+Object 1 update called
+Example object draw called
+Bee draw called
+Sprite is null in animation draw call
+swap buffers called
+loop time and count: 23, 103
+time slept in milliseconds: 10
+number of steps: 356928

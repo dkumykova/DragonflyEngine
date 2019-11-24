@@ -5,6 +5,7 @@
 #include "SFML/Graphics.hpp"
 #include "Color.h"
 #include "Vector.h"
+#include "Utility.h"
 
 #define DM df::DisplayManager::getInstance()
 //defaults for SFML window
@@ -38,6 +39,8 @@ namespace df {
 		int window_horizontal_chars; //x ascii spaces in window
 		int window_vertical_chars; //y ascii spaces in window
 		sf::Color window_background_color; 
+
+		Utility u;
 
 	public:
 

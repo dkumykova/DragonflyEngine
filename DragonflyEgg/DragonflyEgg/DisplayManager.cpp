@@ -11,6 +11,7 @@ DisplayManager::DisplayManager() {
 	window_vertical_pixels = WINDOW_VERTICAL_PIXELS_DEFAULT;
 	window_horizontal_chars = WINDOW_HORIZONTAL_CHARS_DEFAULT;
 	window_vertical_chars = WINDOW_VERTICAL_CHARS_DEFAULT;
+	u = Utility();
 }
 
 DisplayManager &DisplayManager::getInstance() {
@@ -58,7 +59,7 @@ int DisplayManager::drawCh(Vector world_pos, char ch, Color color) const {
 	if (window == NULL) {
 		return -1;
 	}
-
+	Vector view_pos = u.worldToView(world_pos);
 	//convert spaces x,y to pixels x, y
 	Vector pixel_pos = spacesToPixels(world_pos);
 
