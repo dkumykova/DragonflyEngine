@@ -98,6 +98,22 @@ int DisplayManager::drawCh(Vector world_pos, char ch, Color color) const {
 		text.setFillColor(sf::Color::White);
 		//LM.writeLog("Setting character color to white");
 		break;
+	case GREEN:
+		text.setFillColor(sf::Color::Green);
+		//LM.writeLog("Setting character color to yellow");
+		break;
+	case BLUE:
+		text.setFillColor(sf::Color::Blue);
+		//LM.writeLog("Setting character color to red");
+		break;
+	case MAGENTA:
+		text.setFillColor(sf::Color::Magenta);
+		//LM.writeLog("Setting character color to white");
+		break;
+	case CYAN:
+		text.setFillColor(sf::Color::Cyan);
+		//LM.writeLog("Setting character color to yellow");
+		break;
 	default:
 		break;
 	}

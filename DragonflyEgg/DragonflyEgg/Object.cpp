@@ -2,6 +2,7 @@
 #include "LogManager.h"
 #include "WorldManager.h"
 #include "ResourceManager.h"
+#include "DisplayManager.h"
 using namespace df;
 
 Object::Object() {
@@ -67,6 +68,17 @@ int Object::draw() {
 	LM.writeLog("Object draw called");
 	Vector pos = getPosition();
 	
+	Vector collisionCorner = getBox().getCorner();
+	float width = getBox().getHorizontal();
+	float height = getBox().getVertical();
+	Vector topright = Vector(collisionCorner.getX() + width, collisionCorner.getY());
+	Vector bottomleft = Vector(collisionCorner.getX(), collisionCorner.getY() - height);
+	Vector bottomright = Vector(collisionCorner.getX() + width, collisionCorner.getY() - height);
+
+	//DM.drawCh(collisionCorner, '*', WHITE);
+	//DM.drawCh(topright, '*', WHITE);
+	//DM.drawCh(bottomleft, '*', WHITE);
+	//DM.drawCh(bottomright, '*', WHITE);
 	return animation.draw(pos);
 }
 
@@ -159,10 +171,12 @@ int Object::setSprite(std::string sprite_label) {
 	
 	animation.setSprite(sprite);
 	//this is hacky and probably won't work
-	getBox().setHorizontal(sprite->getWidth());
-	getBox().setVertical(sprite->getHeight());
+	float height = sprite->getHeight();
+	float width = sprite->getWidth();
+	//getBox().setHorizontal(sprite->getWidth());
+	//getBox().setVertical(sprite->getHeight());
 	//either or
-	setBox(Box(Vector(), sprite->getWidth(), sprite->getHeight())); //set bounding box to be size of object as drawn
+	setBox(Box(Vector(getPosition()), width, height)); //set bounding box to be size of object as drawn
 	return 0;
 }
 

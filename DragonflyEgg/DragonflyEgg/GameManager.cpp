@@ -76,20 +76,7 @@ void GameManager::run() {
 		WM.update();
 		WM.draw();
 
-		Frame f = Frame(1, 6, "OOOOO");
 		
-		f.draw(Vector(5, 5), RED);
-			
-		Animation a = Animation();
-		/*Sprite s = Sprite(5);
-		s.setWidth();
-		s.setHeight();
-		s.setColor();*/
-
-		a.setName("testAnimate");
-		a.setSlowdownCount(2);
-		a.setSprite(RM.getSprite("sprites/good-spr.txt"));
-		a.draw(Vector(20, 20));
 		
 		//demonstrate the different justifications for drawing strings
 		//DM.drawString(df::Vector(50, 5), "Center Justified", CENTER_JUSTIFIED, WHITE);

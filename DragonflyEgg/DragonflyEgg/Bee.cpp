@@ -16,18 +16,20 @@ Bee::Bee() {
 	setType("Bee");
 	setAltitude(1);
 	setSpeed(.25);
-	setDirection(Vector(1.0, 0));
+	setDirection(Vector(-1.0, 0));
 	
-	int v1 = rand() % 30;
+	int v1 = rand() % 60;
 	int v2 = rand() % 30;
 	setPosition(Vector(v1, v2));
 	setSolidness(SOFT);
 
 	Sprite *s = RM.getSprite("saucer");
 	a = Animation();
-	a.setSlowdownCount(2);
+	//a.setSlowdownCount(s->getSlowdown());
 	a.setSprite(s);
 	setAnimation(a);
+
+	death = RM.getSound("explode");
 	
 
 
@@ -54,7 +56,8 @@ int Bee::eventHandler(const Event *p_e) {
 		//if collid with example object controlled by player
 		if (ec->getObject1()->getType() == "example" || ec->getObject2()->getType() == "example") {
 			LM.writeLog("collided with player! Time to delete myself");
-			//WM.markForDelete(this);
+			death->play();
+			WM.markForDelete(this);
 		}
 
 	}

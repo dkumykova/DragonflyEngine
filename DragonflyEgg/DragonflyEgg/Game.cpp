@@ -61,7 +61,6 @@ int main(int argc, char* argv[])
 	RM.loadSprite("sprites/explosion-spr.txt", "explosion");
 	RM.loadSprite("sprites/gameover-spr.txt", "gameover");
 	RM.loadSprite("sprites/gamestart-spr.txt", "gamestart");
-	RM.loadSprite("sprites/healthpack-spr.txt", "healthpack");
 
 	RM.loadSound("sounds/fire.wav", "fire");
 	RM.loadSound("sounds/explode.wav", "explode");
@@ -77,11 +76,11 @@ int main(int argc, char* argv[])
 	new Bee;
 	new Bee;
 	new Bee;
-	//Music *musicTest = RM.getMusic("gameMusic");
+	Music *musicTest = RM.getMusic("gameMusic");
 	//musicTest->play();
 	
 	GM.run();
 
-	
+	//musicTest->stop();
 	
 }

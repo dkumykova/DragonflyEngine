@@ -15,6 +15,11 @@ Animation::Animation() {
 //set sprite index to 0 (first frame)
 void Animation::setSprite(Sprite* new_sprite) {
 	sprite = new_sprite;
+	if (sprite != NULL) {
+		setSlowdownCount(sprite->getSlowdown());
+	}
+	sprite->getColor();
+	
 }
 
 //retunr pointer to associated sprite

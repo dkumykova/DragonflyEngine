@@ -6,14 +6,20 @@
 #include "DisplayManager.h"
 #include "EventCollision.h"
 #include "EventOut.h"
+#include "ResourceManager.h"
 using namespace df;
 
 ExampleObject::ExampleObject() {
 	setType("example");
 	LM.writeLog("ExampleObject constructor called");
 	setAltitude(2); //lower, appears behind
-	setPosition(Vector(40, 20));
-	setSprite("ship");
+	setPosition(Vector(10, 20));
+	Sprite* s = RM.getSprite("ship");
+	a = Animation();
+	//a.setSlowdownCount(s->getSlowdown());
+	a.setSprite(s);
+	setAnimation(a);
+
 	move_slowdown = 2;
 	move_countdown = move_slowdown;
 }
@@ -129,11 +135,11 @@ ExampleObject::~ExampleObject() {
 	LM.writeLog("ExampleObject destructor called");
 }
 
-int ExampleObject::draw() {
-	LM.writeLog("Example object draw called");
-
-	DM.drawString(getPosition(), "EO", CENTER_JUSTIFIED, YELLOW);
-	return 0;
-	//draw object here
-}
+//int ExampleObject::draw() {
+//	LM.writeLog("Example object draw called");
+//
+//	DM.drawString(getPosition(), "EO", CENTER_JUSTIFIED, YELLOW);
+//	return 0;
+//	//draw object here
+//}
 
