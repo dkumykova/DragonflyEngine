@@ -10,6 +10,7 @@
 #include "ResourceManager.h"
 #include <vector>
 #include "Frame.h"
+#include "Bee.h"
 
 using namespace df;
 
@@ -43,10 +44,26 @@ void GameManager::run() {
 
 	Clock *clock = new Clock();
 	while (!game_over) {
-		if (loop_count > 2000) { //stop after 2 loop
+		if (loop_count == 50) { //stop after 2 loop
 			//GM.setGameOver();
-			GM.shutDown();
+			
+			WM.setView(Box(Vector(30, 10), 20, 20));
+			//GM.shutDown();
 		}
+		if (loop_count == 80) {
+			WM.setView(Box(Vector(), DM.getHorizontalPixels(), DM.getVerticalPixels()));
+			std::vector<Object*> bees = WM.objectsOfType("Bee");
+			std::vector<Object*>::iterator i;
+
+			//WM.setBoundary(Box(Vector(), 10, 10));
+			for (i = bees.begin(); i != bees.end(); i++) {
+				if ((*i)->getId() == 1) {
+					WM.setViewFollowing((*i));
+				}
+			}
+			
+		}
+	
 		clock->delta(); //get elapsed time
 		//create event step and send to each object in world manager list
 		//print all objects in updates list
@@ -135,7 +152,7 @@ int GameManager::startUp() {
 	}*/
 	game_over = false; 
 	WM.setBoundary(Box(Vector(), DM.getHorizontal(), DM.getVertical()));
-	WM.setView(Box(Vector(), DM.getHorizontal(), DM.getVertical()));
+	WM.setView(Box(Vector(), DM.getHorizontalPixels(), DM.getVerticalPixels()));
 	//call in order to have clock millisecond resolution
 	timeBeginPeriod(1);
 

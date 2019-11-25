@@ -105,7 +105,7 @@ void InputManager::getInput() {
 		}
 	}
 
-	//check current key press events for each key - do i have to do ALL of them??
+	//check current key press events for each key 
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)) {
 		LM.writeLog("Key %d is being held down", keycode);
 		//key pressed stuff

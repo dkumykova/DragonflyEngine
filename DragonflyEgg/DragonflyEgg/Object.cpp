@@ -71,14 +71,16 @@ int Object::draw() {
 	Vector collisionCorner = getBox().getCorner();
 	float width = getBox().getHorizontal();
 	float height = getBox().getVertical();
-	Vector topright = Vector(collisionCorner.getX() + width, collisionCorner.getY());
-	Vector bottomleft = Vector(collisionCorner.getX(), collisionCorner.getY() - height);
-	Vector bottomright = Vector(collisionCorner.getX() + width, collisionCorner.getY() - height);
+	Vector topleft = Vector(pos.getX(), pos.getY() - height);
+	Vector topright = Vector(pos.getX() - width, pos.getY() - height);
+	Vector bottomright = Vector(pos.getX(), pos.getY());
+	Vector bottomleft = Vector(pos.getX() - width, pos.getY());
 
-	//DM.drawCh(collisionCorner, '*', WHITE);
-	//DM.drawCh(topright, '*', WHITE);
-	//DM.drawCh(bottomleft, '*', WHITE);
-	//DM.drawCh(bottomright, '*', WHITE);
+	/*DM.drawCh(topleft, '*', WHITE);
+	DM.drawCh(topright, '*', WHITE);
+	DM.drawCh(bottomleft, '*', RED);
+	DM.drawCh(bottomright, '*', WHITE);*/
+	//return DM.drawCh(pos, '+', RED);
 	return animation.draw(pos);
 }
 

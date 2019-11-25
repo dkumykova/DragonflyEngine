@@ -283,6 +283,7 @@ int WorldManager::setViewFollowing(Object* new_view_following) {
 	if (found) {
 		view_following = new_view_following;
 		setViewPosition(view_following->getPosition());
+		LM.writeLog("Setting new view");
 		return 0;
 	}
 	

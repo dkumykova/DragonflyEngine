@@ -19,6 +19,9 @@ ExampleObject::ExampleObject() {
 	//a.setSlowdownCount(s->getSlowdown());
 	a.setSprite(s);
 	setAnimation(a);
+	setSprite("ship");
+	//setDirection(Vector(1, 0));
+	//setSpeed(.5);
 
 	move_slowdown = 2;
 	move_countdown = move_slowdown;
@@ -40,7 +43,7 @@ int ExampleObject::eventHandler(const Event *p_e) {
 		const df::EventKeyboard* ke =
 			dynamic_cast <const df::EventKeyboard*> (p_e);
 		kbd(ke);
-		//return 0;
+		return 0;
 	}
 	if (p_e->getType() == COLLISION_EVENT) {
 		LM.writeLog("Player has collided with something!");
@@ -110,14 +113,14 @@ void ExampleObject::move(int dx, int dy) {
 	}
 	move_countdown = move_slowdown;
 	
-	new_position = Vector(getPosition().getX() + dx, getPosition().getY() + dy);
+    new_position = Vector(getPosition().getX() + dx, getPosition().getY() + dy);
 
 	
 	//if stays in window, allow object to move
 	
 	//if ((new_position.getY() > 3) && (new_position.getY() < WM.getBoundary().getVertical())) {
 	WM.moveObject(this, new_position);
-	return;
+	//return;
 	//}
 }
 

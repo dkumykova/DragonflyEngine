@@ -59,7 +59,7 @@ int DisplayManager::drawCh(Vector world_pos, char ch, Color color) const {
 	if (window == NULL) {
 		return -1;
 	}
-	Vector view_pos = u.worldToView(world_pos);
+	//Vector view_pos = u.worldToView(world_pos);
 	//convert spaces x,y to pixels x, y
 	Vector pixel_pos = spacesToPixels(world_pos);
 

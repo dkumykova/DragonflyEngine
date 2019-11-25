@@ -76,6 +76,7 @@ int main(int argc, char* argv[])
 	new Bee;
 	new Bee;
 	new Bee;
+	new Bee;
 	Music *musicTest = RM.getMusic("gameMusic");
 	//musicTest->play();
 	

@@ -12,26 +12,47 @@
 using namespace df;
 
 Bee::Bee() {
+	//srand(0);
 	LM.writeLog("Bee constructor called");
 	setType("Bee");
 	setAltitude(1);
 	setSpeed(.25);
-	setDirection(Vector(-1.0, 0));
 	
+	setDirection(Vector(1.0, 0));
 	int v1 = rand() % 60;
 	int v2 = rand() % 30;
 	setPosition(Vector(v1, v2));
 	setSolidness(SOFT);
 
-	Sprite *s = RM.getSprite("saucer");
+	
+	death = RM.getSound("explode");
+	switch (getId()) {
+	/*case 0:
+		setPosition(Vector(10, 20));
+		setDirection(Vector(1.0, 0));
+		break;
+	case 1:
+		setPosition(Vector(20, 30));
+		setDirection(Vector(-1.0, 0));
+		break;*/
+	case 2:
+		setPosition(Vector(0, 20));
+		//setDirection(Vector(1.0, 1.0));
+		break;
+	case 3:
+		setPosition(Vector(10, 10));
+		//setDirection(Vector(1.0, 1.0));
+		break;
+	default:
+		break;
+	}
+	
+	Sprite* s = RM.getSprite("saucer");
 	a = Animation();
 	//a.setSlowdownCount(s->getSlowdown());
 	a.setSprite(s);
 	setAnimation(a);
-
-	death = RM.getSound("explode");
-	
-
+	setSprite("saucer");
 
 }
 
@@ -43,7 +64,7 @@ int Bee::eventHandler(const Event *p_e) {
 			LM.writeLog("Setting bee altitude to 3!");
 			setAltitude(3);
 		}
-		else if (GM.getLoopCount() == 1500) {
+		else if (GM.getLoopCount() == 2000) {
 			WM.markForDelete(this);
 			return 0;
 		}
@@ -58,6 +79,11 @@ int Bee::eventHandler(const Event *p_e) {
 			LM.writeLog("collided with player! Time to delete myself");
 			death->play();
 			WM.markForDelete(this);
+		}
+		if (ec->getObject1()->getType() == "Bee" || ec->getObject2()->getType() == "Bee") {
+			LM.writeLog("collided with bee!");
+			//death->play();
+			//WM.markForDelete(this);
 		}
 
 	}
