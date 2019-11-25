@@ -4,7 +4,6 @@
 #include "WorldManager.h"
 #include "GameManager.h"
 #include "DisplayManager.h"
-//#include "EventKeyboard.h"
 #include "EventCollision.h"
 #include "EventOut.h"
 using namespace df;
@@ -14,6 +13,7 @@ ExampleObject::ExampleObject() {
 	LM.writeLog("ExampleObject constructor called");
 	setAltitude(2); //lower, appears behind
 	setPosition(Vector(40, 20));
+	setSprite("ship");
 	move_slowdown = 2;
 	move_countdown = move_slowdown;
 }

@@ -7,6 +7,7 @@
 #include "EventKeyboard.h"
 #include "EventCollision.h"
 #include "EventOut.h"
+#include "ResourceManager.h"
 
 using namespace df;
 
@@ -16,9 +17,19 @@ Bee::Bee() {
 	setAltitude(1);
 	setSpeed(.25);
 	setDirection(Vector(1.0, 0));
-	setPosition(Vector(20, 20));
+	
+	int v1 = rand() % 30;
+	int v2 = rand() % 30;
+	setPosition(Vector(v1, v2));
 	setSolidness(SOFT);
-	setSprite("");
+
+	Sprite *s = RM.getSprite("saucer");
+	a = Animation();
+	a.setSlowdownCount(2);
+	a.setSprite(s);
+	setAnimation(a);
+	
+
 
 }
 
@@ -64,11 +75,4 @@ int Bee::eventHandler(const Event *p_e) {
 
 Bee::~Bee() {
 	LM.writeLog("Bee destructor called");
-}
-
-int Bee::draw() {
-	LM.writeLog("Bee draw called");
-
-	DM.drawString(getPosition(), "Bee", CENTER_JUSTIFIED, RED);
-	return 0;
 }

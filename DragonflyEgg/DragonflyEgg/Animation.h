@@ -11,6 +11,7 @@ namespace df {
 		std::string name; //sprite name in resource manager
 		int index; //current index frame for sprite
 		int slowdown_count; //slowdown counter
+		int count;
 
 	public:
 		Animation();

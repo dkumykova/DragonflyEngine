@@ -41,11 +41,12 @@ int ResourceManager::loadSound(std::string filename, std::string label) {
 
 	//all set
 	sound[sound_count].setLabel(label);
+	sound_count++;
 	return 0;
 }
 
 int ResourceManager::unloadSound(std::string label) {
-	for (int i = 0; i < sound_count - 1; i++) {
+	for (int i = 0; i < sound_count; i++) {
 		if (label == sound[i].getLabel()) {
 			//scoot over remaining sounds
 			for (int j = 0; j < sound_count - 2; j++) {
@@ -60,7 +61,7 @@ int ResourceManager::unloadSound(std::string label) {
 }
 
 Sound* ResourceManager::getSound(std::string label) {
-	for (int i = 0; i < sound_count - 1; i++) {
+	for (int i = 0; i < sound_count; i++) {
 		if (label == sound[i].getLabel()) {
 			return &sound[i];
 
@@ -82,11 +83,12 @@ int ResourceManager::loadMusic(std::string filename, std::string label) {
 
 	//all set
 	music[music_count].setLabel(label);
+	music_count++;
 	return 0;
 }
 
 int ResourceManager::unloadMusic(std::string label) {
-	for (int i = 0; i < music_count - 1; i++) {
+	for (int i = 0; i < music_count; i++) {
 		if (label == music[i].getLabel()) {
 			//scoot over remaining sounds
 			music[i].setLabel("");
@@ -99,7 +101,7 @@ int ResourceManager::unloadMusic(std::string label) {
 }
 
 Music* ResourceManager::getMusic(std::string label) {
-	for (int i = 0; i < music_count - 1; i++) {
+	for (int i = 0; i < music_count; i++) {
 		if (label == music[i].getLabel()) {
 			return &music[i];
 

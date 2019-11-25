@@ -8,6 +8,7 @@ Animation::Animation() {
 	index = 0;
 	slowdown_count = 0;
 	sprite = NULL;
+	count = 0;
 }
 
 //set associated sprite to new one; sprite is managed by RM
@@ -64,7 +65,7 @@ int Animation::draw(Vector position) {
 	}
 
 	//incrememnt counter
-	int count = getSlowdownCount();
+	//int count = getSlowdownCount();
 	count++;
 
 	//advance sprite index if appropriate
@@ -82,6 +83,6 @@ int Animation::draw(Vector position) {
 	}
 
 	//set counter for next draw
-	setSlowdownCount(count);
+	//setSlowdownCount(count);
 
 }
